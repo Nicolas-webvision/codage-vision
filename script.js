@@ -1,29 +1,7 @@
 // MENU DE NAVIGATION PRINCIPAL DU SITE 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.navbar-toggle-1');
-    const menu = document.querySelector('.navbar-menu');
-    const hasSubmenu = document.querySelector('.has-submenu');
-
-    if (menuToggle && menu) {
-        menuToggle.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            console.log('Navbar toggle clicked');
-        });
-    }
-
-    if (hasSubmenu) {
-        hasSubmenu.addEventListener('mouseenter', function() {
-            this.querySelector('.submenu').classList.add('submenu-active');
-        });
-
-        hasSubmenu.addEventListener('mouseleave', function() {
-            this.querySelector('.submenu').classList.remove('submenu-active');
-        });
-    }
+document.querySelector('.navbar-toggle-1').addEventListener('click', function() {
+    document.querySelector('.navbar-menu').classList.toggle('active');
 });
-
-    
-    
 
     // Gestion des sections collapsibles
     document.querySelectorAll('.collapsible').forEach(button => {
