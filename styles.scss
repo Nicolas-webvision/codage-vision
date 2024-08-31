@@ -1,0 +1,2848 @@
+// Variable 
+
+$primary-color: rgb(0, 108, 5);
+$secondary-color: rgb(42, 1, 97);
+$text-color: black;
+$background-color: #f9f9f9;
+$sidebar-color: #2ecc71;
+$background-white: #ffffff;
+$header-color: #2c3e50;
+$text-muted: #7f8c8d;
+$border-color: #34495e;
+$hover-bg-color: #575757;
+$submenu-bg-color: #a0a0a0;
+$button-background: #007BFF;
+$button-background-hover: #0056b3;
+$highlight-color: #ff7e5f;
+
+$font-family-primary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font-family-secondary: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+$font-size-small: 0.9em;
+
+$margin: 20px;
+$padding: 20px;
+$border-radius: 5px;
+
+$gradient-start: #8e44ad;
+$gradient-end: #3498db;
+
+$icon-background: white;
+$icon-color: #f39c12;
+
+$background-image-url: 'https://trustmyscience.com/wp-content/uploads/2018/09/definition-galaxie-1201x800.jpeg';
+
+// Mixin pour le reset global
+@mixin global-reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  // Application du reset global
+  * {
+    @include global-reset;
+  }
+  
+  // Corps de la page
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-primary;
+    background-color: #f4f4f4;
+    color: #333;
+    width: 100%;
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+}
+
+.header-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.header-image {
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+
+.header-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.5em; 
+    }
+}
+  
+  // Navigation
+  .navbar {
+    background-color: $secondary-color;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    .navbar-brand a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navbar-toggle-1 {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        span {
+            height: 2px;
+            width: 25px;
+            background-color: white;
+            margin-bottom: 4px;
+            transition: all 0.3s;
+        }
+    }
+
+    .navbar-menu {
+        list-style-type: none;
+        display: flex;
+        gap: 2rem;
+
+        li {
+            position: relative;
+
+            a {
+                color: white;
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #555;
+                    border-radius: 5px;
+                }
+            }
+
+            .submenu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #444;
+                list-style: none;
+                padding: 0.5rem 0;
+                border-radius: 5px;
+                min-width: 180px;
+
+                li a {
+                    padding: 0.5rem 1rem;
+                    display: block;
+
+                    &:hover {
+                        background-color: #666;
+                    }
+                }
+            }
+
+            .submenu-active {
+                display: block;
+            }
+        }
+    }
+}
+
+// Media query pour mobile
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: $navbar-bg;
+
+        &.active {
+            display: flex;
+        }
+
+        .submenu {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    .navbar-toggle-1 {
+        display: flex;
+    }
+}
+
+
+  // PIED DE PAGE (FOOTER)
+
+  .simple-footer {
+    background-color: $submenu-bg-color;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+  .container-bloc {
+    border-left: 5px solid $primary-color;
+    background: $background-color;
+    padding: $padding;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin-top: 0;
+        color: $text-color;
+    }
+
+    p {
+        color: $secondary-color;
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+        h2 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+.content-block {
+    background-color: #e8e8e8; 
+    padding: 20px; 
+    border-radius: 8px; 
+    max-width: 600px; 
+    margin: 20px auto; 
+  
+    .block-title {
+      font-size: 24px; 
+      color: #333; 
+      margin-bottom: 10px; 
+    }
+  
+    .block-text {
+      font-size: 16px; 
+      color: #666; 
+      line-height: 1.5; 
+    }
+
+    ul {
+        margin-top: 20px; 
+      }
+
+    li {
+        margin-top: 10px;
+    }
+  
+    // Adaptation aux écrans plus petits
+    @media (max-width: 768px) {
+      padding: 15px; 
+      max-width: 90%; 
+  
+      .block-title {
+        font-size: 20px; 
+      }
+  
+      .block-text {
+        font-size: 14px;
+      }
+      ul {
+        margin-top: 15px; 
+      }
+      li {
+        margin-top: 5px;
+    }
+    }
+  
+    // Adaptation aux très petits écrans (smartphones)
+    @media (max-width: 480px) {
+      padding: 10px; 
+      max-width: 100%; 
+  
+      .block-title {
+        font-size: 18px; 
+      }
+  
+      .block-text {
+        font-size: 13px; 
+      }
+      ul {
+        margin-top: 15px; 
+      }
+      li {
+        margin-top: 5px;
+    }
+    }
+  }
+  
+
+  // DEBUT DES TESTES
+
+
+h1 {
+    color: $secondary-color;
+}
+
+
+// BLOC AVEC UNE BORDURE COLOREE ET UNE OMBRE
+.container-bloc {
+    border-left: 5px solid $primary-color;
+    background: $background-color;
+    padding: $padding;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin-top: 0;
+        color: $text-color;
+    }
+
+    p {
+        color: $secondary-color;
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+        h2{
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+// BLOC AVEC UN FOND DEGRADEE
+
+.container-degrade {
+    background: linear-gradient(45deg, $gradient-start, $gradient-end);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    h2 {
+        margin-top: 0;
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        h2 {
+            font-size: 1.4em;
+        }
+
+        p {
+            font-size: 0.95em;
+        }
+    }
+}
+
+// BLOC AVEC UNE IMAGE DE FOND SEMI-TRANSPARENTE
+
+.container-image {
+    background: url($background-image-url) no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+    margin: 20px 0;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+
+    h2 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+        padding: 20px;
+        h2 {
+            font-size: 1.6em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+// BLOC MINIMALISTE AVEC UNE BARRE LATERALE COLOREE
+
+.container-minimal {
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 8px solid $sidebar-color;
+    background-color: $background-white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin-top: 0;
+        color: $header-color;
+        font-weight: 600;
+    }
+
+    p {
+        color: $text-muted;
+        font-size: 1.1em;
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+// BLOC AVEC ENCADRE ET ICONE
+
+.container-icon {
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid $border-color;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    position: relative;
+
+    .icon {
+        font-size: 30px;
+        color: $icon-color;
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        background: $icon-background;
+        border-radius: 50%;
+        padding: 10px;
+        border: 2px solid $border-color;
+    }
+
+    h2 {
+        margin-left: 60px;
+        color: $border-color;
+        font-weight: 600;
+    }
+
+    p {
+        margin-left: 60px;
+        color: #7f8c8d;
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        .icon {
+            font-size: 24px;
+            top: -15px;
+            left: 15px;
+        }
+
+        h2 {
+            margin-left: 50px;
+            font-size: 1.5em;
+        }
+
+        p {
+            margin-left: 50px;
+            font-size: 1em;
+        }
+    }
+}
+
+// Section d'exemple
+.example-section {
+    margin-bottom: 40px;
+}
+
+// Aperçu du bloc de texte
+.example-preview {
+    margin-bottom: 20px;
+    padding: $padding;
+    background: #fff;
+    border: 1px solid $border-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .container-bloc {
+        border-left: 5px solid $primary-color;
+        background: $background-color;
+        padding: $padding;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            margin-top: 0;
+            color: $text-color;
+        }
+
+        p {
+            color: $secondary-color;
+        }
+    }
+}
+
+// Styles pour les sections collapsibles
+.collapsible {
+    display: flex;
+    background-color: $button-background;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 20%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collapsible:hover {
+    background-color: $button-background-hover;
+}
+
+.collapsible-content {
+    display: none;
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.collapsible-content pre {
+    margin: 0;
+    overflow-x: auto;
+}
+
+.collapsible-content code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: $font-size-small;
+}
+
+// Adaptation mobile
+@media (max-width: 600px) {
+    .example-preview {
+        padding: 15px;
+    }
+
+    .container-bloc {
+        padding: 15px;
+        margin: 10px 0;
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+
+    .collapsible {
+        font-size: 0.9em;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .collapsible-content {
+        padding: 8px;
+    }
+
+    .collapsible-content code {
+        font-size: 0.8em;
+    }
+}
+
+// BOUTON COPIE DES CODES
+
+.code-block {
+    position: relative;
+    display: inline-block;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.copy-btn:hover {
+    background-color: #2980b9;
+}
+
+// LES MENUS DE NAVIGATION 
+// Menu de navigation 1
+.nav-horizontal {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: $primary-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// Menu de navigation 2
+
+.nav-vertical {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: $background-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+        display: block;
+        color: $text-color;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 1px solid $secondary-color;
+
+        &:hover {
+            background-color: lighten($background-color, 20%);
+        }
+    }
+
+    li:last-child a {
+        border-bottom: none;
+    }
+}
+
+// Menu de navigation 3
+
+.nav-dropdown {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: $primary-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+    }
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+}
+
+// Menu de navigation 4 
+
+.nav-hamburger {
+    background-color: $primary-color;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+    .hamburger-menu {
+        display: block;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        text-align: right;
+    }
+
+    .menu-content {
+        display: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            padding: 8px 0;
+
+            a {
+                display: block;
+                color: white;
+                padding: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                background-color: $primary-color;
+                border-bottom: 1px solid darken($primary-color, 10%);
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+}
+
+// Menu de navigation 5 
+
+.nav-underline {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #ffffff; // Couleur de fond du menu
+
+        li {
+            position: relative;
+
+            a {
+                display: block;
+                color: #333333; // Couleur du texte du lien
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #007BFF; // Couleur du texte au survol
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #007BFF; // Couleur de la ligne de soulignement au survol
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Adaptation mobile
+@media (max-width: 600px) {
+    .nav-underline ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-underline ul li a {
+        padding: 10px;
+    }
+}
+
+// Menu de navigation 6 
+
+.nav-zoom {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #f8f9fa; // Couleur de fond du menu
+
+        li {
+            position: relative;
+
+            a {
+                display: block;
+                color: #343a40; // Couleur du texte du lien
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: transform 0.3s ease; // Transition pour l'effet de zoom
+
+                &:hover {
+                    transform: scale(1.1); // Effet de zoom au survol
+                }
+            }
+        }
+    }
+}
+
+// Adaptation mobile
+@media (max-width: 600px) {
+    .nav-zoom ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-zoom ul li a {
+        padding: 10px;
+    }
+}
+
+// Menu de navigation 7
+
+.nav-active {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #ffffff; // Couleur de fond du menu
+
+        li {
+            position: relative;
+
+            a {
+                display: block;
+                color: #333; // Couleur du texte du lien
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease; // Transition pour la couleur au survol
+
+                &.active {
+                    color: #007BFF; // Couleur du texte pour le lien actif
+                    border-bottom: 2px solid #007BFF; // Indicateur pour l'élément actif
+                }
+            }
+        }
+    }
+}
+
+// Adaptation mobile
+@media (max-width: 600px) {
+    .nav-active ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-active ul li a {
+        padding: 10px;
+    }
+}
+
+// Menu de navigation 8
+
+.nav-tabs {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-color: $primary-color; // Couleur de fond du menu
+
+        li {
+            margin: 0;
+
+            a {
+                display: block;
+                color: $background-color; // Couleur du texte
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &.active {
+                    background-color: $primary-color; // Couleur de fond de l'onglet actif
+                    color: $secondary-color; // Couleur du texte de l'onglet actif
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-tabs {
+        ul {
+            flex-direction: column; // Aligne les onglets en colonne sur les petits écrans
+        }
+
+        li {
+            a {
+                padding: 10px; // Réduit le padding pour les petits écrans
+            }
+        }
+    }
+}
+
+// Menu de navigation 9
+
+.nav-vertical {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: $background-color; // Couleur de fond du menu
+        width: 200px; // Largeur du menu
+        height: 100vh; // Hauteur du menu (plein écran)
+        overflow-y: auto; // Permet le défilement vertical
+
+        li {
+            a {
+                display: block;
+                color: $text-color; // Couleur du texte
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: $primary-color; // Couleur de fond au survol
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .nav-vertical {
+        ul {
+            width: 100%; // Réduit la largeur du menu pour les petits écrans
+            height: auto; // Ajuste la hauteur du menu pour les petits écrans
+            position: relative; // Positionne le menu correctement
+        }
+
+        li {
+            a {
+                padding: 10px; // Réduit le padding pour les petits écrans
+                font-size: 0.9em; // Réduit la taille de la police pour les petits écrans
+            }
+        }
+    }
+}
+
+// Menu de navigation 10
+
+.nav-slide {
+    position: relative;
+
+    .slide-btn {
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: $button-background; // Couleur de fond du bouton
+        color: $text-color; // Couleur du texte
+        border: none;
+        border-radius: 5px;
+        z-index: 1000; // Assure que le bouton est au-dessus du menu
+    }
+
+    .slide-menu {
+        position: fixed;
+        top: 0;
+        left: -250px; // Positionne le menu en dehors de l'écran
+        width: 250px;
+        height: 100%;
+        background-color: $background-color; // Couleur de fond du menu
+        overflow-y: auto;
+        transition: left 0.3s ease; // Animation pour l'effet de glissement
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li a {
+                display: block;
+                color: $text-color; // Couleur du texte
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: $primary-color; // Couleur de fond au survol
+                }
+            }
+        }
+    }
+
+    &.active .slide-menu {
+        left: 0; // Affiche le menu en le faisant glisser vers la droite
+    }
+}
+
+
+// Adaptation mobile
+@media (max-width: 600px) {
+    .nav-slide .slide-btn {
+        font-size: 20px; // Réduit la taille du bouton pour les petits écrans
+        padding: 8px; // Réduit le padding pour les petits écrans
+    }
+
+    .nav-slide .slide-menu {
+        width: 200px; // Réduit la largeur du menu pour les petits écrans
+    }
+
+    .nav-slide .slide-menu ul li a {
+        padding: 12px; // Réduit le padding pour les petits écrans
+        font-size: 0.9em; // Réduit la taille de la police pour les petits écrans
+    }
+}
+
+// Menu de navigation 11
+
+.nav-icons {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: $background-color;
+        
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                color: $text-color;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                i {
+                    margin-right: 8px;
+                }
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+// Variables SCSS
+$background-color: #f8f9fa;
+$text-color: #343a40;
+$hover-color: #007BFF;
+
+// Media queries for responsiveness
+@media (max-width: 768px) {
+    .nav-icons ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-icons ul li a {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-icons ul li a {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    .nav-icons ul li a i {
+        margin-right: 5px;
+    }
+}
+
+// LES PIEDS DE PAGE 
+
+// Pied de page 1
+
+.footer-simple {
+    background-color: #fff;
+    border-top: 2px solid #3498db;
+    padding: 20px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #3498db;
+    padding: 20px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-item .icon {
+    font-size: 2em;
+    color: #3498db;
+    margin-right: 15px;
+}
+
+.footer-item h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.footer-item p {
+    color: #666;
+}
+
+.footer-item a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .footer-item .icon {
+        font-size: 1.5em;
+    }
+    .footer-item h2 {
+        font-size: 1.5em;
+    }
+}
+
+// Pied de page 2 
+
+.footer-social {
+    background-color: #fff;
+    border-top: 2px solid #3498db;
+    padding: 20px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #3498db;
+    padding: 20px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-item .icon {
+    font-size: 2em;
+    color: #3498db;
+    margin-right: 15px;
+}
+
+.footer-item h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .footer-item .icon {
+        font-size: 1.5em;
+    }
+    .footer-item h2 {
+        font-size: 1.5em;
+    }
+}
+
+// Pied de page 3 
+
+.footer-map-contact {
+    background-color: #fff;
+    border-top: 2px solid #3498db;
+    padding: 20px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #3498db;
+    padding: 20px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-item .icon {
+    font-size: 2em;
+    color: #3498db;
+    margin-right: 15px;
+}
+
+.footer-item h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.footer-item iframe {
+    border: 0;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .footer-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .footer-item .icon {
+        font-size: 1.5em;
+    }
+    .footer-item h2 {
+        font-size: 1.5em;
+    }
+}
+
+// Pied de page 4 
+
+.footer-legal {
+    background-color: #fff;
+    border-top: 2px solid #3498db;
+    padding: 20px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #3498db;
+    padding: 20px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-item .icon {
+    font-size: 2em;
+    color: #3498db;
+    margin-right: 15px;
+}
+
+.footer-item h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.footer-item a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .footer-item .icon {
+        font-size: 1.5em;
+    }
+    .footer-item h2 {
+        font-size: 1.5em;
+    }
+}
+
+// FORMULAIRES DE CONTACT 
+
+// Formulaire avec Dégradé et Ombre
+.gradient-shadow-form {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background: #fff;
+        }
+
+        button {
+            padding: 10px;
+            background: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:hover {
+                background: #ff3d3d;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        form {
+            input, textarea {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+// Formulaire avec Bordures Arrondies et Ombre
+
+.rounded-shadow-form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+                background: #1e88e5;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        form {
+            input, textarea {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+
+// Formulaire avec Bordures Colorées
+.colored-border-form {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 2px solid #4CAF50;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 3px;
+            background: #fff;
+        }
+
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:hover {
+                background: #45A049;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        form {
+            input, textarea {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+// Formulaire Minimaliste avec Icônes
+
+.minimalist-icon-form {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .icon {
+                margin-right: 10px;
+                font-size: 1.2em;
+            }
+
+            input, textarea {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                background: #fff;
+            }
+        }
+
+        button {
+            padding: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:hover {
+                background: #555;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        .input-group {
+            input, textarea {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+//  Formulaire avec Effet de Focus et Validation
+
+.focus-effect-form {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-input {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: #2196F3;
+                outline: none;
+            }
+        }
+
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background: #1e88e5;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        .form-input {
+            font-size: 1em;
+        }
+    }
+}
+
+// Formulaire avec Effet de Survol et Animation
+.hover-effect-form {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        input:hover, textarea:hover {
+            border-color: #2196F3;
+            box-shadow: 0 0 10px rgba(33, 150, 243, 0.2);
+        }
+
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #45A049;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        input, textarea {
+            font-size: 1em;
+        }
+    }
+}
+
+// Formulaire avec Boutons Radio et Cases à Cocher
+.checkbox-radio-form {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .radio-group {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 4px;
+            }
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background: #45A049;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        input, textarea {
+            font-size: 1em;
+        }
+    }
+}
+
+// Formulaire avec Validation Dynamique et Indicateurs
+.dynamic-validation-form {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+
+            &:invalid {
+                border-color: #e53935;
+            }
+
+            &:valid {
+                border-color: #43a047;
+            }
+        }
+
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background: #1976D2;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        input, textarea {
+            font-size: 1em;
+        }
+    }
+}
+
+// Formulaire avec Upload de Fichiers et Informations Complètes
+.file-upload-form {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="file"], textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background: #45A049;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        input, textarea {
+            font-size: 1em;
+        }
+    }
+}
+
+.modal-confirmation-form {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background: #1976D2;
+            }
+        }
+    }
+
+    // Formulaire avec Confirmation par Modal
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+
+        input, textarea {
+            font-size: 1em;
+        }
+    }
+}
+
+// LISTES ET TABLEAUX
+
+// Bloc de Liste Non Ordonnée
+
+.unordered-list {
+    list-style-type: disc;
+    padding-left: 20px;
+
+    li {
+        margin-bottom: 10px;
+        color: $text-color;
+    }
+}
+
+// Bloc de Liste Ordonnée
+
+.ordered-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+
+    li {
+        margin-bottom: 10px;
+        color: $text-color;
+    }
+}
+
+//  Bloc de Liste avec Cases à Cocher
+
+.checkbox-list {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+        margin-bottom: 10px;
+
+        label {
+            cursor: pointer;
+
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// Liste à Puces avec Icônes
+
+.icon-list {
+    list-style-type: none;
+    padding-left: 0;
+
+    .icon {
+        color: $primary-color;
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+        color: $text-color;
+    }
+}
+
+// Liste à Puces avec Animation au Survol
+
+.animated-list {
+    list-style-type: disc;
+    padding-left: 20px;
+
+    li {
+        margin-bottom: 10px;
+        font-size: 1em;
+        color: $text-color;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: translateX(10px);
+        }
+    }
+}
+
+// Liste avec Style de Cartes
+
+.card-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card {
+        background: $background-color;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 250px;
+        
+        h3 {
+            margin-top: 0;
+            color: $text-color;
+        }
+
+        p {
+            color: $secondary-color;
+        }
+    }
+}
+
+// TABLEAUX
+
+// Tableau avec En-têtes Colorés
+
+.colored-headers {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        background: $primary-color;
+        color: white;
+        padding: 10px;
+        text-align: left;
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    tbody tr:nth-child(even) {
+        background: $text-muted;
+    }
+}
+
+// Tableau avec Bordures Arrondies
+
+.rounded-borders {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th, td {
+        padding: 10px;
+        border: 1px solid $border-color;
+    }
+
+    thead {
+        background: $primary-color;
+        color: white;
+    }
+
+    tbody tr:nth-child(even) {
+        background: $text-muted;
+    }
+}
+
+// Tableau avec Lignes Alternées
+
+.striped-rows {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        background: $primary-color;
+        color: white;
+    }
+
+    tbody tr {
+        &:nth-child(even) {
+            background: $text-muted;
+        }
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid $border-color;
+    }
+}
+
+// Tableau avec Effet Hover
+
+.hover-effect {
+    width: 100%;
+    border-collapse: collapse;
+    transition: background-color 0.3s;
+
+    tbody tr {
+        &:hover {
+            background: $hover-bg-color;
+        }
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid $border-color;
+    }
+}
+
+// Tableau avec Effet d'Ombre
+
+.shadow-effect {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    thead {
+        background: $primary-color;
+        color: white;
+    }
+
+    tbody tr:nth-child(even) {
+        background: $text-muted;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid $border-color;
+    }
+}
+
+// Tableau avec Barre de Recherche
+
+.search-container {
+    margin-bottom: 20px;
+
+    .search-bar {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+}
+
+.searchable-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        background: $primary-color;
+        color: white;
+    }
+
+    tbody tr:nth-child(even) {
+        background: $text-muted;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid $border-color;
+    }
+}
+
+// Tableau avec Colonnes Réductibles
+
+.collapsible-columns {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+
+    thead {
+        background: $primary-color;
+        color: white;
+    }
+
+    tbody tr {
+        &:nth-child(even) {
+            background: $text-muted;
+        }
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid $border-color;
+        position: relative;
+        overflow: hidden;
+    }
+
+    td {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 10px;
+            background: #f9f9f9;
+            transform: translateX(100%);
+            transition: transform 0.3s;
+        }
+
+        &.collapsed:after {
+            transform: translateX(0);
+        }
+    }
+}
+
+// Tableau à Colonnes Alternées
+
+.striped-columns {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    
+    thead {
+        background: $primary-color;
+        color: white;
+    }
+
+    tbody tr:nth-child(odd) {
+        background: $text-muted;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid $border-color;
+    }
+
+    // Responsive Design
+    @media (max-width: 768px) {
+        thead {
+            display: none; // Cache l'en-tête du tableau
+        }
+
+        tbody, tr {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px; // Espace entre les lignes
+        }
+
+        td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+
+            &:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+                background: #f4f4f4; // Arrière-plan léger pour les labels
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+    // Responsive Design
+    @media (max-width: 768px) {
+        thead {
+            display: none;
+        }
+
+        tbody, tr {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+
+            &:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 10px;
+        }
+    }
+
+    // BARRE DE RECHERCHE 
+
+    // Barre de Recherche avec Bordure Arrondie
+
+    .container-rounded-search {
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #007BFF;
+            border-radius: 25px;
+            outline: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+    
+            &::placeholder {
+                color: #aaa;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Barre de Recherche avec Fond Gradient
+
+    .container-gradient-search {
+        background: linear-gradient(to right, #FFDEE9, #B5FFFC);
+        border-radius: 30px;
+        padding: 5px;
+    }
+    
+    .container-gradient-search input[type="search"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        font-size: 16px;
+    }
+    
+    .container-gradient-search input[type="search"]::placeholder {
+        color: #888;
+    }
+    
+    @media (max-width: 600px) {
+        .container-gradient-search input[type="search"] {
+            padding: 8px;
+            font-size: 14px;
+        }
+    }
+
+    // Barre de Recherche avec Ombre Intérieure
+
+    .container-shadow-search {
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+    
+            &::placeholder {
+                color: #999;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Barre de Recherche avec Icône
+
+    .container-icon-search {
+        position: relative;
+    
+        input[type="search"] {
+            width: 100%;
+            padding: 10px 40px 10px 10px;
+            border: 2px solid #6c757d;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+    
+            &::placeholder {
+                color: #888;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 8px 30px 8px 8px;
+                font-size: 14px;
+            }
+        }
+    
+        .icon-search {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #6c757d;
+            pointer-events: none;
+        }
+    }
+
+    // Barre de Recherche avec Animation de Focus
+
+    .container-animated-search {
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #28a745;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+            &:focus {
+                border-color: #218838;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+    
+            &::placeholder {
+                color: #888;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Barre de Recherche Minimaliste
+
+    .container-minimal-search {
+        input[type="search"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: none;
+            font-size: 16px;
+            background: #f9f9f9;
+    
+            &::placeholder {
+                color: #bbb;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Barre de Recherche avec Bouton
+
+    .container-button-search {
+        display: flex;
+        width: 100%;
+    
+        input[type="search"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            font-size: 16px;
+    
+            &::placeholder {
+                color: #aaa;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    
+        button {
+            padding: 10px 15px;
+            border: 1px solid #007BFF;
+            border-radius: 0 5px 5px 0;
+            background: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.3s;
+    
+            &:hover {
+                background: #0056b3;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Barre de Recherche avec Effet de Focus
+
+    .container-focus-search {
+        input[type="search"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+    
+            &:focus {
+                border-color: #333;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
+    
+            &::placeholder {
+                color: #aaa;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Barre de Recherche avec Bordure Doubles
+
+    .container-double-border-search {
+        input[type="search"] {
+            width: 100%;
+            padding: 12px;
+            border: 3px double #333;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            background: #f8f8f8;
+    
+            &::placeholder {
+                color: #aaa;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Barre de Recherche avec Bordure Colorée
+
+    .container-colored-border-search {
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #FF6347;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            background: #fff;
+    
+            &::placeholder {
+                color: #666;
+            }
+    
+            @media (max-width: 600px) {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // IMAGE AVEC TEXTE 
+
+    // Image avec superposition de texte centré
+
+    .container-centered-text {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 600px) {
+            .text-overlay {
+                font-size: 18px;
+            }
+        }
+    }
+
+    // DESIGN DE BOUTON 
+
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .btn-primary {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .btn-outline {
+        background-color: transparent;
+        color: #007BFF;
+        border: 2px solid #007BFF;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .btn-rounded {
+        background-color: #28A745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    
+    .btn-shadow {
+        background-color: #FFC107;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+    
+    .btn-gradient {
+        background: linear-gradient(45deg, #FF416C, #FF4B2B);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .btn-glow {
+        background-color: #6610F2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #6610F2;
+        cursor: pointer;
+    }
+    
+    .btn-icon {
+        background-color: #17A2B8;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .btn-icon::before {
+        content: '🔍';
+        position: absolute;
+        left: -25px;
+        font-size: 20px;
+    }
+    
+    .btn-pulse {
+        background-color: #DC3545;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .btn-borderless {
+        background-color: transparent;
+        color: #343A40;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .btn-text-only {
+        background-color: transparent;
+        color: #6C757D;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 600px) {
+        .button-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .button-container button {
+            width: 100%;
+            padding: 15px 0;
+            margin: 5px 0;
+        }
+    }
+

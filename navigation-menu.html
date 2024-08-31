@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <title>Site Exemple</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-image-container">
+            <img src="images/entete_1.jpg" alt="Image d'en-tête" class="header-image">
+            <div class="header-title">Codage Vision</div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Menu de navigation</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="has-submenu">
+                <a href="#services">Codage</a>
+                <ul class="submenu">
+                    <li><a href="text-block.html">Bloc Texte</a></li>
+                    <li><a href="navigation-menu.html">Menu de navigation</a></li>
+                    <li><a href="footer.html">Pied de page</a></li>
+                    <li><a href="contact-form.html">Formulaire de contact</a></li>
+                    <li><a href="list-and-table.html">Listes et Tableaux</a></li>
+                    <li><a href="search-bar.html">Barres de recherche</a></li>
+                    <li><a href="button.html">Styles de bouton</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+    
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <h2>Le choix du menu de navigation</h2>
+                    <p>Le choix du menu de navigation est crucial dans la création d'un site web, un menu de navigation efficace doit être intuitif et accessible. Cela signifie qu'il doit être organisé de manière logique, avec des catégories claires et des sous-menus si nécessaire. Il doit également être visible et facile à utiliser, quel que soit l'appareil utilisé par le visiteur, que ce soit un ordinateur de bureau, une tablette ou un smartphone.</p>
+                    <p>Par ailleurs, le menu de navigation joue un rôle clé dans l'optimisation pour les moteurs de recherche (SEO). En structurant les liens de manière claire et en intégrant des mots-clés pertinents dans les titres des menus, il est possible d'améliorer la visibilité du site sur les moteurs de recherche, ce qui peut conduire à une augmentation du trafic organique.</p>
+                </div>
+            </div>
+
+        <section class="example-section">
+            <h2>Menu de Navigation Simple (Horizontal)</h2>
+        
+            <div class="example-preview">
+                <nav class="nav-horizontal">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-horizontal"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-horizontal {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: $primary-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-horizontal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-horizontal ul li {
+    display: inline;
+}
+
+.nav-horizontal ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-horizontal ul li a:hover {
+    background-color: #45a049;
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+
+<section class="example-section">
+    <h2>Menu de Navigation Vertical (Sidebar)</h2>
+
+    <div class="example-preview">
+        <nav class="nav-vertical">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-vertical"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-vertical {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: $background-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+        display: block;
+        color: $text-color;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 1px solid $secondary-color;
+
+        &:hover {
+            background-color: lighten($background-color, 20%);
+        }
+    }
+
+    li:last-child a {
+        border-bottom: none;
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-vertical ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-vertical ul li a {
+    display: block;
+    color: #00796b;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #004d40;
+}
+
+.nav-vertical ul li a:hover {
+    background-color: #b2dfdb;
+}
+
+.nav-vertical ul li:last-child a {
+    border-bottom: none;
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation avec Dropdown</h2>
+
+    <div class="example-preview">
+        <nav class="nav-dropdown">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="#">Service 1</a>
+                        <a href="#">Service 2</a>
+                        <a href="#">Service 3</a>
+                    </div>
+                </li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-dropdown"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+            &lt;a href="#" class="dropbtn"&gt;Services&lt;/a&gt;
+            &lt;div class="dropdown-content"&gt;
+                &lt;a href="#"&gt;Service 1&lt;/a&gt;
+                &lt;a href="#"&gt;Service 2&lt;/a&gt;
+                &lt;a href="#"&gt;Service 3&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-dropdown {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: $primary-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        li {
+            display: inline-block;
+            position: relative;
+
+            .dropbtn {
+                display: block;
+                color: white;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: lighten($primary-color, 20%);
+                min-width: 160px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+
+                a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+
+                    &:hover {
+                        background-color: lighten($primary-color, 40%);
+                    }
+                }
+            }
+
+            &:hover .dropdown-content {
+                display: block;
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-dropdown ul li .dropbtn {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-dropdown ul li .dropbtn:hover {
+    background-color: #45a049;
+}
+
+.nav-dropdown ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e0f7fa;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.nav-dropdown ul li .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-dropdown ul li .dropdown-content a:hover {
+    background-color: #b2dfdb;
+}
+
+.nav-dropdown ul li:hover .dropdown-content {
+    display: block;
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation Hamburger (Mobile)</h2>
+
+    <div class="example-preview">
+        <nav class="nav-hamburger">
+            <span class="hamburger-menu" onclick="toggleMenu()">☰</span>
+            <ul class="menu-content">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-hamburger"&gt;
+    &lt;span class="hamburger-menu" onclick="toggleMenu()"&gt;☰&lt;/span&gt;
+    &lt;ul class="menu-content"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-hamburger {
+    background-color: $primary-color;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+    .hamburger-menu {
+        display: block;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        text-align: right;
+    }
+
+    .menu-content {
+        display: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            padding: 8px 0;
+
+            a {
+                display: block;
+                color: white;
+                padding: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                background-color: $primary-color;
+                border-bottom: 1px solid darken($primary-color, 10%);
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-hamburger {
+    background-color: #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.hamburger-menu {
+    display: block;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.menu-content {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-content li a {
+    display: block;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #4CAF50;
+    border-bottom: 1px solid #3E8E41;
+}
+
+.menu-content li a:hover {
+    background-color: #45a049;
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code Javascript -->
+<button class="collapsible">Afficher le code Javascript</button>
+<div class="collapsible-content">
+    <div class="code-block">
+        <button class="copy-btn">Copier</button>
+        <pre><code>.nav-slide {
+            function toggleMenu() {
+                var menu = document.querySelector('.menu-content');
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            }
+        }
+    </code></pre>
+    </div>
+</div>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation Horizontal avec Effet de Soulignement</h2>
+
+    <div class="example-preview">
+        <nav class="nav-underline">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-underline"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-underline {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: $background-color;
+    }
+
+    li {
+        position: relative;
+
+        a {
+            display: block;
+            color: $text-color;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                color: $hover-color;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $hover-color;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-underline ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+
+.nav-underline ul li {
+    position: relative;
+}
+
+.nav-underline ul li a {
+    display: block;
+    color: #333;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-underline ul li a:hover {
+    color: #007BFF;
+}
+
+.nav-underline ul li a:hover::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #007BFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation avec Effet de Zoom au Survol</h2>
+
+    <div class="example-preview">
+        <nav class="nav-zoom">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-zoom"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-zoom {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: $background-color;
+    }
+
+    li {
+        position: relative;
+
+        a {
+            display: block;
+            color: $text-color;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-zoom ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;
+}
+
+.nav-zoom ul li a {
+    display: block;
+    color: #343a40;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.nav-zoom ul li a:hover {
+    transform: scale(1.1);
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation avec Indicateur Actif</h2>
+
+    <div class="example-preview">
+        <nav class="nav-active">
+            <ul>
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-active"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#" class="active"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-active {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: $background-color;
+    }
+
+    li {
+        position: relative;
+
+        a {
+            display: block;
+            color: $text-color;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+
+            &.active {
+                color: $active-color;
+                border-bottom: 2px solid $active-color;
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-active ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+
+.nav-active ul li a {
+    display: block;
+    color: #333;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-active ul li a.active {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+}</code></pre>
+        </div>
+    </div>
+
+<!-- Code Javascript -->
+<button class="collapsible">Afficher le code Javascript</button>
+<div class="collapsible-content">
+    <div class="code-block">
+        <button class="copy-btn">Copier</button>
+        <pre><code>document.querySelectorAll('.nav-active a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav-active a').forEach(function(el) {
+                    el.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </code></pre>
+    </div>
+</div>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation avec Onglets</h2>
+
+    <div class="example-preview">
+        <nav class="nav-tabs">
+            <ul>
+                <li class="active"><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-tabs"&gt;
+    &lt;ul&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-tabs {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-color: $background-color;
+
+        li {
+            margin: 0;
+
+            a {
+                display: block;
+                color: $text-color;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &.active {
+                    background-color: $active-background;
+                    color: $active-color;
+                }
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-tabs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f8f9fa;
+}
+
+.nav-tabs ul li a {
+    display: block;
+    color: #343a40;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-tabs ul li a.active {
+    background-color: #007BFF;
+    color: #ffffff;
+}</code></pre>
+        </div>
+    </div>
+
+<!-- Code Javascript -->
+<button class="collapsible">Afficher le code Javascript</button>
+<div class="collapsible-content">
+    <div class="code-block">
+        <button class="copy-btn">Copier</button>
+        <pre><code>document.querySelectorAll('.nav-tabs a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav-tabs li').forEach(function(el) {
+                    el.classList.remove('active');
+                });
+                this.parentElement.classList.add('active');
+            });
+        });
+    </code></pre>
+    </div>
+</div>
+</section>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation Vertical avec Effet de Défilement</h2>
+
+    <div class="example-preview">
+        <nav class="nav-vertical">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-vertical"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-vertical {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: $background-color;
+        width: 200px;
+        height: 100vh;
+        overflow-y: auto;
+
+        li {
+            a {
+                display: block;
+                color: $text-color;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: $hover-background;
+                }
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-vertical ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    width: 200px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.nav-vertical ul li a {
+    display: block;
+    color: #343a40;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-vertical ul li a:hover {
+    background-color: #e9ecef;
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation avec Effet de Glissement Latéral</h2>
+
+    <div class="example-preview">
+        <nav class="nav-slide">
+            <span class="slide-btn" onclick="toggleSlideMenu()">☰</span>
+            <div class="slide-menu">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-slide"&gt;
+    &lt;span class="slide-btn" onclick="toggleSlideMenu()"&gt;☰&lt;/span&gt;
+    &lt;div class="slide-menu"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-slide {
+    position: relative;
+
+    .slide-btn {
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: $button-background;
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .slide-menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: $background-color;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li a {
+                display: block;
+                color: $text-color;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: $hover-background;
+                }
+            }
+        }
+    }
+
+    &.active .slide-menu {
+        left: 0;
+    }
+}
+
+$background-color: #f8f9fa;
+$text-color: #343a40;
+$hover-background: #e9ecef;
+$button-background: #007BFF;
+
+@media (max-width: 600px) {
+    .nav-slide .slide-btn {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .nav-slide .slide-menu {
+        width: 200px;
+    }
+
+    .nav-slide .slide-menu ul li a {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-slide {
+    position: relative;
+}
+
+.nav-slide .slide-btn {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.nav-slide .slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+}
+
+.nav-slide .slide-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-slide .slide-menu ul li a {
+    display: block;
+    color: #343a40;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-slide .slide-menu ul li a:hover {
+    background-color: #e9ecef;
+}
+
+.nav-slide.active .slide-menu {
+    left: 0;
+}
+
+@media (max-width: 600px) {
+    .nav-slide .slide-btn {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .nav-slide .slide-menu {
+        width: 200px;
+    }
+
+    .nav-slide .slide-menu ul li a {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+}
+
+</code></pre>
+        </div>
+    </div>
+
+    <!-- Code Javascript -->
+    <button class="collapsible">Afficher le code Javascript</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-slide {
+                function toggleSlideMenu() {
+                    var menu = document.querySelector('.nav-slide');
+                    menu.classList.toggle('active');
+                }
+            }
+        </code></pre>
+        </div>
+    </div>
+
+</section>
+
+<section class="example-section">
+    <h2>Menu de Navigation avec Icônes</h2>
+
+    <div class="example-preview">
+        <nav class="nav-icons">
+            <ul>
+                <li><a href="#"><i class="icon-home"></i> Accueil</a></li>
+                <li><a href="#"><i class="icon-info"></i> À propos</a></li>
+                <li><a href="#"><i class="icon-services"></i> Services</a></li>
+                <li><a href="#"><i class="icon-contact"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;nav class="nav-icons"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-home"&gt;&lt;/i&gt; Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-info"&gt;&lt;/i&gt; À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-services"&gt;&lt;/i&gt; Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-contact"&gt;&lt;/i&gt; Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-icons {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: $background-color;
+    }
+
+    li {
+        a {
+            display: flex;
+            align-items: center;
+            color: $text-color;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+
+            i {
+                margin-right: 8px;
+            }
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.nav-icons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;
+}
+
+.nav-icons ul li a {
+    display: flex;
+    align-items: center;
+    color: #343a40;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-icons ul li a i {
+    margin-right: 8px;
+}
+
+.nav-icons ul li a:hover {
+    color: #007BFF;
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:contact@example.com">nicolas.webvision@gmail.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Liens</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="#">Codages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

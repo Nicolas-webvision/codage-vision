@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <title>Site Exemple</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-image-container">
+            <img src="images/entete_1.jpg" alt="Image d'en-tête" class="header-image">
+            <div class="header-title">Codage Vision</div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Pieds de page</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="has-submenu">
+                <a href="#services">Codage</a>
+                <ul class="submenu">
+                    <li><a href="text-block.html">Bloc Texte</a></li>
+                    <li><a href="navigation-menu.html">Menu de navigation</a></li>
+                    <li><a href="footer.html">Pied de page</a></li>
+                    <li><a href="contact-form.html">Formulaire de contact</a></li>
+                    <li><a href="list-and-table.html">Listes et Tableaux</a></li>
+                    <li><a href="button.html">Styles de bouton</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        
+        <div class="example-preview">
+            <div class="container-bloc">
+                <h2>Le choix des pieds de page</h2>
+                <p>Le pied de page, souvent négligé, est pourtant un élément essentiel dans la conception d'un site web. Bien conçu, il joue un rôle crucial dans l’expérience utilisateur, la navigation, et l’efficacité globale du site. Il s’agit de la dernière section que les visiteurs voient avant de quitter une page, et il peut contenir des informations clés qui influencent leur perception de l'entreprise ou du service.</p>
+                <p>Tout d'abord, le pied de page sert de repère pour les utilisateurs. C'est un endroit stratégique pour regrouper des liens importants qui pourraient ne pas trouver leur place dans le menu principal. On y trouve souvent des éléments comme les mentions légales, les conditions générales, la politique de confidentialité, ou encore des informations de contact. Ces liens rassurent les visiteurs en leur offrant un accès facile aux informations essentielles sans encombrer la partie principale du site.</p>
+                <p>En matière de design, le pied de page doit être cohérent avec l’identité visuelle du site, tout en étant assez distinct pour indiquer qu’il s’agit de la fin de la page. Il doit être lisible, avec un contraste suffisant entre le texte et le fond, et la taille des polices doit être adaptée pour permettre une lecture confortable. L’organisation des éléments dans le pied de page doit être logique et hiérarchisée, en plaçant les informations les plus importantes de manière accessible.</p>
+            </div>
+        </div>
+
+        <section class="example-section">
+            <h2>Pied de Page Simple avec Contact</h2>
+        
+            <div class="example-preview">
+                <footer class="footer footer-simple">
+                    <div class="footer-content">
+                        <div class="footer-item">
+                            <div class="icon">&#9733;</div>
+                            <h2>Contact</h2>
+                            <p>123 Rue Exemple, Ville, Pays</p>
+                            <p><a href="mailto:contact@monsite.com">contact@monsite.com</a></p>
+                        </div>
+                        <div class="footer-item">
+                            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;footer class="footer footer-simple"&gt;
+            &lt;div class="footer-content"&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;div class="icon"&gt;&#9733;&lt;/div&gt;
+                    &lt;h2&gt;Contact&lt;/h2&gt;
+                    &lt;p&gt;123 Rue Exemple, Ville, Pays&lt;/p&gt;
+                    &lt;p&gt;&lt;a href="mailto:contact@monsite.com"&gt;contact@monsite.com&lt;/a&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;p&gt;&amp;copy; 2024 Mon Site. Tous droits réservés.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-simple {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .footer-item p {
+            color: #666;
+        }
+        
+        .footer-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .footer-item a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-simple {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .footer-item p {
+            color: #666;
+        }
+        
+        .footer-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .footer-item a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Pied de Page avec Liens Sociaux</h2>
+        
+            <div class="example-preview">
+                <footer class="footer footer-social">
+                    <div class="footer-content">
+                        <div class="footer-item">
+                            <div class="icon">&#9733;</div>
+                            <h2>Suivez-nous</h2>
+                            <ul class="social-links">
+                                <li><a href="#"><i class="icon-facebook"></i> Facebook</a></li>
+                                <li><a href="#"><i class="icon-twitter"></i> Twitter</a></li>
+                                <li><a href="#"><i class="icon-instagram"></i> Instagram</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;footer class="footer footer-social"&gt;
+            &lt;div class="footer-content"&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;div class="icon"&gt;&#9733;&lt;/div&gt;
+                    &lt;h2&gt;Suivez-nous&lt;/h2&gt;
+                    &lt;ul class="social-links"&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-facebook"&gt;&lt;/i&gt; Facebook&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-twitter"&gt;&lt;/i&gt; Twitter&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-instagram"&gt;&lt;/i&gt; Instagram&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;p&gt;&amp;copy; 2024 Mon Site. Tous droits réservés.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-social {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .social-links li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        .social-links a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-social {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .social-links li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        .social-links a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="example-section">
+            <h2>Pied de Page avec Carte et Contact</h2>
+        
+            <div class="example-preview">
+                <footer class="footer footer-map-contact">
+                    <div class="footer-content">
+                        <div class="footer-item">
+                            <div class="icon">&#9733;</div>
+                            <h2>Nous Trouver</h2>
+                            <p>123 Rue Exemple, Ville, Pays</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.327023377207!2d-122.0838516846816!3d37.42199977982561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbff7a2dcbbab%3A0xa0f015c6a5d8d87!2sGoogleplex!5e0!3m2!1sen!2sus!4v1633928825594!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="footer-item">
+                            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;footer class="footer footer-map-contact"&gt;
+            &lt;div class="footer-content"&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;div class="icon"&gt;&#9733;&lt;/div&gt;
+                    &lt;h2&gt;Nous Trouver&lt;/h2&gt;
+                    &lt;p&gt;123 Rue Exemple, Ville, Pays&lt;/p&gt;
+                    &lt;iframe src="https://www.google.com/maps/embed?pb=..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"&gt;&lt;/iframe&gt;
+                &lt;/div&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;p&gt;&amp;copy; 2024 Mon Site. Tous droits réservés.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-map-contact {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .footer-item iframe {
+            border: 0;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-map-contact {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .footer-item iframe {
+            border: 0;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="example-section">
+            <h2>Pied de Page avec Informations Légales</h2>
+        
+            <div class="example-preview">
+                <footer class="footer footer-legal">
+                    <div class="footer-content">
+                        <div class="footer-item">
+                            <div class="icon">&#9733;</div>
+                            <h2>Informations Légales</h2>
+                            <p><a href="#">Mentions légales</a></p>
+                            <p><a href="#">Politique de confidentialité</a></p>
+                            <p><a href="#">Conditions d'utilisation</a></p>
+                        </div>
+                        <div class="footer-item">
+                            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;footer class="footer footer-legal"&gt;
+            &lt;div class="footer-content"&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;div class="icon"&gt;&#9733;&lt;/div&gt;
+                    &lt;h2&gt;Informations Légales&lt;/h2&gt;
+                    &lt;p&gt;&lt;a href="#"&gt;Mentions légales&lt;/a&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;a href="#"&gt;Politique de confidentialité&lt;/a&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;a href="#"&gt;Conditions d'utilisation&lt;/a&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="footer-item"&gt;
+                    &lt;p&gt;&amp;copy; 2024 Mon Site. Tous droits réservés.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-legal {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .footer-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .footer-item a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.footer-legal {
+            background-color: #fff;
+            border-top: 2px solid #3498db;
+            padding: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-item .icon {
+            font-size: 2em;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        
+        .footer-item h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .footer-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .footer-item a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .footer-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .footer-item .icon {
+                font-size: 1.5em;
+            }
+            .footer-item h2 {
+                font-size: 1.5em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+</main>
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+                <p>Téléphone: +123 456 789</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Liens</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+    
+     

@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <title>Site Exemple</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-image-container">
+            <img src="images/entete_1.jpg" alt="Image d'en-tête" class="header-image">
+            <div class="header-title">Codage Vision</div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Formulaires de contact</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="has-submenu">
+                <a href="#services">Codage</a>
+                <ul class="submenu">
+                    <li><a href="text-block.html">Bloc Texte</a></li>
+                    <li><a href="navigation-menu.html">Menu de navigation</a></li>
+                    <li><a href="footer.html">Pied de page</a></li>
+                    <li><a href="text-in-image.html">Texte dans l'image</a></li>
+                    <li><a href="contact-form.html">Formulaire de contact</a></li>
+                    <li><a href="list-and-table.html">Listes et Tableaux</a></li>
+                    <li><a href="search-bar.html">Barres de recherche</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <div class="example-preview">
+            <div class="container-bloc">
+                <h2>Le choix des formulaires de contact</h2>
+                <p>Les formulaires de contact sont un élément crucial dans la conception d'un site web, car ils constituent souvent le principal moyen pour les visiteurs d'entrer en relation avec une entreprise ou un service. Leur importance réside non seulement dans leur fonctionnalité, mais aussi dans l'expérience utilisateur qu'ils offrent. Un formulaire bien conçu peut transformer un visiteur passif en un client potentiel, tandis qu'un formulaire mal pensé peut décourager l'utilisateur et entraîner une perte d'opportunités.</p>
+                <p>Un bon formulaire de contact doit avant tout être simple et intuitif. La clarté est essentielle : les champs doivent être clairement étiquetés et disposés de manière logique. Les informations demandées doivent être pertinentes et limitées au strict nécessaire pour éviter de submerger l'utilisateur. Par exemple, demander un nom, une adresse e-mail et un message peut suffire dans la majorité des cas. Des formulaires trop longs ou complexes peuvent frustrer les utilisateurs et les dissuader de les remplir.</p>
+                <p>Le design du formulaire joue également un rôle important. Il doit être en harmonie avec l'identité visuelle du site tout en restant distinct pour attirer l'attention. L'utilisation de couleurs contrastées pour les boutons d'action, comme "Envoyer" ou "Soumettre", peut encourager les utilisateurs à finaliser leur démarche. Il est aussi crucial de fournir des indications claires en cas d'erreur de saisie, comme un champ manquant ou mal rempli, afin que l'utilisateur puisse corriger rapidement et facilement ses informations.</p>
+            </div>
+        </div>
+
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Dégradé et Ombre</h2>
+        
+            <div class="example-preview">
+                <div class="container-form gradient-shadow-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50"&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required minlength="10"&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.gradient-shadow-form {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 10px;
+                    color: #333;
+                }
+        
+                input, textarea {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 3px;
+                    background: #fff;
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #ff6f61;
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #ff3d3d;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                form {
+                    input, textarea {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.gradient-shadow-form {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background: #fff;
+        }
+        
+        button {
+            padding: 10px;
+            background: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #ff3d3d;
+        }
+        
+        @media (max-width: 600px) {
+            .gradient-shadow-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Bordures Arrondies et Ombre</h2>
+        
+            <div class="example-preview">
+                <div class="container-form rounded-shadow-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50"&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required minlength="10"&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.rounded-shadow-form {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 10px;
+                    color: #333;
+                }
+        
+                input, textarea {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #2196F3;
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #1e88e5;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                form {
+                    input, textarea {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.rounded-shadow-form {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #1e88e5;
+        }
+        
+        @media (max-width: 600px) {
+            .rounded-shadow-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Bordures Colorées</h2>
+        
+            <div class="example-preview">
+                <div class="container-form colored-border-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50"&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required minlength="10"&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.colored-border-form {
+            background: #f4f4f4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 2px solid #4CAF50;
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 10px;
+                    color: #333;
+                }
+        
+                input, textarea {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border: 2px solid #4CAF50;
+                    border-radius: 3px;
+                    background: #fff;
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #45A049;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                form {
+                    input, textarea {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.colored-border-form {
+            background: #f4f4f4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 2px solid #4CAF50;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 3px;
+            background: #fff;
+        }
+        
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #45A049;
+        }
+        
+        @media (max-width: 600px) {
+            .colored-border-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact Minimaliste avec Icônes</h2>
+        
+            <div class="example-preview">
+                <div class="container-form minimalist-icon-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <div class="input-group">
+                            <span class="icon">👤</span>
+                            <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                        </div>
+        
+                        <label for="email">Email :</label>
+                        <div class="input-group">
+                            <span class="icon">📧</span>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+        
+                        <label for="message">Message :</label>
+                        <div class="input-group">
+                            <span class="icon">✉️</span>
+                            <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+                        </div>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;div class="input-group"&gt;
+                &lt;span class="icon"&gt;👤&lt;/span&gt;
+                &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50"&gt;
+            &lt;/div&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;div class="input-group"&gt;
+                &lt;span class="icon"&gt;📧&lt;/span&gt;
+                &lt;input type="email" id="email" name="email" required&gt;
+            &lt;/div&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;div class="input-group"&gt;
+                &lt;span class="icon"&gt;✉️&lt;/span&gt;
+                &lt;textarea id="message" name="message" rows="4" required minlength="10"&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.minimalist-icon-form {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                .input-group {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+        
+                    .icon {
+                        margin-right: 10px;
+                        font-size: 1.2em;
+                    }
+        
+                    input, textarea {
+                        flex: 1;
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        background: #fff;
+                    }
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #333;
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #555;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                .input-group {
+                    input, textarea {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.minimalist-icon-form {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        input, textarea {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background: #fff;
+        }
+        
+        button {
+            padding: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #555;
+        }
+        
+        @media (max-width: 600px) {
+            .minimalist-icon-form {
+                padding: 15px;
+            }
+        
+            .input-group {
+                input, textarea {
+                    font-size: 1em;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Effet de Focus et Validation</h2>
+        
+            <div class="example-preview">
+                <div class="container-form focus-effect-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50" class="form-input">
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required class="form-input">
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10" class="form-input"></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50" class="form-input"&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required class="form-input"&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required minlength="10" class="form-input"&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.focus-effect-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 8px;
+                    color: #333;
+                }
+        
+                .form-input {
+                    margin-bottom: 16px;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 4px;
+                    transition: border-color 0.3s;
+        
+                    &:focus {
+                        border-color: #2196F3;
+                        outline: none;
+                    }
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #2196F3;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #1e88e5;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                .form-input {
+                    font-size: 1em;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.focus-effect-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .form-input {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-input:focus {
+            border-color: #2196F3;
+            outline: none;
+        }
+        
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #1e88e5;
+        }
+        
+        @media (max-width: 600px) {
+            .focus-effect-form {
+                padding: 15px;
+            }
+        
+            .form-input {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Effet de Survol et Animation</h2>
+        
+            <div class="example-preview">
+                <div class="container-form hover-effect-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50"&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required minlength="10"&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.hover-effect-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 8px;
+                    color: #333;
+                }
+        
+                input, textarea {
+                    margin-bottom: 16px;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    transition: all 0.3s;
+                }
+        
+                input:hover, textarea:hover {
+                    border-color: #2196F3;
+                    box-shadow: 0 0 10px rgba(33, 150, 243, 0.2);
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: background 0.3s;
+        
+                    &:hover {
+                        background: #45A049;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                input, textarea {
+                    font-size: 1em;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.hover-effect-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        input, textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        input:hover, textarea:hover {
+            border-color: #2196F3;
+            box-shadow: 0 0 10px rgba(33, 150, 243, 0.2);
+        }
+        
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #45A049;
+        }
+        
+        @media (max-width: 600px) {
+            .hover-effect-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Boutons Radio et Cases à Cocher</h2>
+        
+            <div class="example-preview">
+                <div class="container-form checkbox-radio-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="inquiry-type">Type de demande :</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="inquiry_type" value="general" checked> Général
+                            </label>
+                            <label>
+                                <input type="radio" name="inquiry_type" value="support"> Support
+                            </label>
+                            <label>
+                                <input type="radio" name="inquiry_type" value="feedback"> Retour d'expérience
+                            </label>
+                        </div>
+        
+                        <label for="subscribe">
+                            <input type="checkbox" id="subscribe" name="subscribe"> S'abonner à notre newsletter
+                        </label>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="inquiry-type"&gt;Type de demande :&lt;/label&gt;
+            &lt;div class="radio-group"&gt;
+                &lt;label&gt;
+                    &lt;input type="radio" name="inquiry_type" value="general" checked&gt; Général
+                &lt;/label&gt;
+                &lt;label&gt;
+                    &lt;input type="radio" name="inquiry_type" value="support"&gt; Support
+                &lt;/label&gt;
+                &lt;label&gt;
+                    &lt;input type="radio" name="inquiry_type" value="feedback"&gt; Retour d'expérience
+                &lt;/label&gt;
+            &lt;/div&gt;
+        
+            &lt;label for="subscribe"&gt;
+                &lt;input type="checkbox" id="subscribe" name="subscribe"&gt; S'abonner à notre newsletter
+            &lt;/label&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.checkbox-radio-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 8px;
+                    color: #333;
+                }
+        
+                .radio-group {
+                    margin-bottom: 16px;
+                    display: flex;
+                    flex-direction: column;
+        
+                    label {
+                        margin-bottom: 4px;
+                    }
+                }
+        
+                input[type="text"], input[type="email"], textarea {
+                    margin-bottom: 16px;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #45A049;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                input, textarea {
+                    font-size: 1em;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.checkbox-radio-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .radio-group {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        input[type="text"], input[type="email"], textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #45A049;
+        }
+        
+        @media (max-width: 600px) {
+            .checkbox-radio-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Validation Dynamique et Indicateurs</h2>
+        
+            <div class="example-preview">
+                <div class="container-form dynamic-validation-form">
+                    <form action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50"&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required minlength="10"&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.dynamic-validation-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 8px;
+                    color: #333;
+                }
+        
+                input, textarea {
+                    margin-bottom: 16px;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    transition: border-color 0.3s;
+        
+                    &:invalid {
+                        border-color: #e53935;
+                    }
+        
+                    &:valid {
+                        border-color: #43a047;
+                    }
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #2196F3;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #1976D2;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                input, textarea {
+                    font-size: 1em;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.dynamic-validation-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        input, textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        
+        input:invalid, textarea:invalid {
+            border-color: #e53935;
+        }
+        
+        input:valid, textarea:valid {
+            border-color: #43a047;
+        }
+        
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #1976D2;
+        }
+        
+        @media (max-width: 600px) {
+            .dynamic-validation-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Upload de Fichiers et Informations Complètes</h2>
+        
+            <div class="example-preview">
+                <div class="container-form file-upload-form">
+                    <form action="/submit_form" method="POST" enctype="multipart/form-data">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="file">Télécharger un fichier :</label>
+                        <input type="file" id="file" name="file" accept=".jpg, .png, .pdf" required>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form action="/submit_form" method="POST" enctype="multipart/form-data"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="file"&gt;Télécharger un fichier :&lt;/label&gt;
+            &lt;input type="file" id="file" name="file" accept=".jpg, .png, .pdf" required&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
+        
+            &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.file-upload-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 8px;
+                    color: #333;
+                }
+        
+                input[type="text"], input[type="email"], input[type="file"], textarea {
+                    margin-bottom: 16px;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #45A049;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                input, textarea {
+                    font-size: 1em;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.file-upload-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        input[type="text"], input[type="email"], input[type="file"], textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #45A049;
+        }
+        
+        @media (max-width: 600px) {
+            .file-upload-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Formulaire de Contact avec Confirmation par Modal</h2>
+        
+            <div class="example-preview">
+                <div class="container-form modal-confirmation-form">
+                    <form id="contact-form" action="/submit_form" method="POST">
+                        <!-- CSRF Token -->
+                        <input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE">
+        
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+        
+                        <button type="button" id="submit-btn">Envoyer</button>
+                    </form>
+                </div>
+        
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Confirmation</h2>
+                        <p>Êtes-vous sûr de vouloir envoyer ce formulaire ?</p>
+                        <button id="confirm-btn">Oui, envoyer</button>
+                        <button id="cancel-btn">Annuler</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;form id="contact-form" action="/submit_form" method="POST"&gt;
+            &lt;input type="hidden" name="csrf_token" value="YOUR_CSRF_TOKEN_HERE"&gt;
+        
+            &lt;label for="name"&gt;Nom :&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required&gt;
+        
+            &lt;label for="email"&gt;Email :&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        
+            &lt;label for="message"&gt;Message :&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
+        
+            &lt;button type="button" id="submit-btn"&gt;Envoyer&lt;/button&gt;
+        &lt;/form&gt;
+        
+        &lt;div id="modal" class="modal"&gt;
+            &lt;div class="modal-content"&gt;
+                &lt;span class="close"&gt;&amp;times;&lt;/span&gt;
+                &lt;h2&gt;Confirmation&lt;/h2&gt;
+                &lt;p&gt;Êtes-vous sûr de vouloir envoyer ce formulaire ?&lt;/p&gt;
+                &lt;button id="confirm-btn"&gt;Oui, envoyer&lt;/button&gt;
+                &lt;button id="cancel-btn"&gt;Annuler&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.modal-confirmation-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            form {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 8px;
+                    color: #333;
+                }
+        
+                input, textarea {
+                    margin-bottom: 16px;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+        
+                button {
+                    padding: 10px;
+                    background: #2196F3;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #1976D2;
+                    }
+                }
+            }
+        
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 15% auto; /* 15% from the top and centered */
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Could be more or less, depending on screen size */
+                }
+                
+                .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+        
+                    &:hover,
+                    &:focus {
+                        color: black;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        
+            @media (max-width: 600px) {
+                padding: 15px;
+        
+                input, textarea {
+                    font-size: 1em;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.modal-confirmation-form {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        input, textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #1976D2;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 600px) {
+            .modal-confirmation-form {
+                padding: 15px;
+            }
+        
+            input, textarea {
+                font-size: 1em;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+                <p>Téléphone: +123 456 789</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Liens</h2>
+                <ul class="footer-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

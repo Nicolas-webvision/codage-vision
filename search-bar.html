@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <title>Site Exemple</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-image-container">
+            <img src="images/entete_1.jpg" alt="Image d'en-tête" class="header-image">
+            <div class="header-title">Codage Vision</div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Barres de recherche</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="has-submenu">
+                <a href="#services">Codage</a>
+                <ul class="submenu">
+                    <li><a href="text-block.html">Bloc Texte</a></li>
+                    <li><a href="navigation-menu.html">Menu de navigation</a></li>
+                    <li><a href="footer.html">Pied de page</a></li>
+                    <li><a href="contact-form.html">Formulaire de contact</a></li>
+                    <li><a href="list-and-table.html">Listes et Tableaux</a></li>
+                    <li><a href="search-bar.html">Barres de recherche</a></li>
+                    <li><a href="button.html">Styles de bouton</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <div class="example-preview">
+            <div class="container-bloc">
+                <h2>Le choix des barres de recherche</h2>
+                <p>Les barres de recherche sont des éléments essentiels pour améliorer l'expérience utilisateur sur un site web. Elles permettent aux visiteurs de trouver rapidement des informations spécifiques en effectuant une recherche ciblée, ce qui peut considérablement augmenter l'efficacité et la convivialité du site. Un design et une fonctionnalité optimisés pour les barres de recherche peuvent transformer une simple visite en une interaction réussie, tout en aidant à réduire la frustration des utilisateurs.</p>
+                
+            </div>
+        </div>
+
+        <section class="example-section">
+            <h2>Barre de Recherche avec Bordure Arrondie</h2>
+        
+            <div class="example-preview">
+                <div class="container-rounded-search">
+                    <input type="search" placeholder="Rechercher...">
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-rounded-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-rounded-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #007BFF;
+                border-radius: 25px;
+                outline: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                font-size: 16px;
+        
+                &::placeholder {
+                    color: #aaa;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-rounded-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #007BFF;
+                border-radius: 25px;
+                outline: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                font-size: 16px;
+            }
+        
+            input[type="search"]::placeholder {
+                color: #aaa;
+            }
+        
+            @media (max-width: 600px) {
+                input[type="search"] {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+
+        <!-- Code JavaScript -->
+    <button class="collapsible">Afficher le code JavaScript</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector('.container-rounded-search input[type="search"]');
+
+    searchInput.addEventListener('focus', function() {
+        searchInput.style.borderColor = '#0056b3'; // Change border color on focus
+    });
+
+    searchInput.addEventListener('blur', function() {
+        searchInput.style.borderColor = '#007BFF'; // Reset border color when focus is lost
+    });
+
+    // Optionally add functionality for real-time search filtering
+    searchInput.addEventListener('input', function() {
+        console.log('User is typing: ', searchInput.value); // Example action
+    });
+});
+</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="example-section">
+    <h2>Barre de Recherche avec Fond Gradient</h2>
+
+    <div class="example-preview">
+        <div class="container-gradient-search">
+            <input type="search" id="search-input" placeholder="Rechercher...">
+            <ul id="search-results" class="search-results">
+                <!-- Les résultats de recherche seront insérés ici -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Code HTML -->
+    <button class="collapsible">Afficher le code HTML</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>&lt;div class="container-gradient-search"&gt;
+    &lt;input type="search" id="search-input" placeholder="Rechercher..."&gt;
+    &lt;ul id="search-results" class="search-results"&gt;&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Code SCSS -->
+    <button class="collapsible">Afficher le code SCSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.container-gradient-search {
+    background: linear-gradient(to right, #FFDEE9, #B5FFFC);
+    border-radius: 30px;
+    padding: 5px;
+    position: relative;
+
+    input[type="search"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        font-size: 16px;
+
+        &::placeholder {
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            padding: 8px;
+            font-size: 14px;
+        }
+    }
+
+    .search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-radius: 0 0 30px 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+        max-height: 200px;
+        overflow-y: auto;
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+
+            &:hover {
+                background: #f0f0f0;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .search-results {
+            max-height: 150px;
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Code CSS -->
+    <button class="collapsible">Afficher le code CSS</button>
+    <div class="collapsible-content">
+        <div class="code-block">
+            <button class="copy-btn">Copier</button>
+            <pre><code>.container-gradient-search {
+    background: linear-gradient(to right, #FFDEE9, #B5FFFC);
+    border-radius: 30px;
+    padding: 5px;
+    position: relative;
+}
+
+.container-gradient-search input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+}
+
+.container-gradient-search input[type="search"]::placeholder {
+    color: #888;
+}
+
+.container-gradient-search .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.container-gradient-search .search-results li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.container-gradient-search .search-results li:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+    .search-results {
+        max-height: 150px;
+    }
+}
+</code></pre>
+    </div>
+</div>
+</div>
+
+<!-- Code JavaScript -->
+<button class="collapsible">Afficher le code JavaScript</button>
+<div class="collapsible-content">
+    <div class="code-block">
+        <button class="copy-btn">Copier</button>
+        <pre><code>document.addEventListener('DOMContentLoaded', function() {
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+
+// Simulated data for demonstration
+const data = [
+    'Planète Mars',
+    'Planète Vénus',
+    'Planète Terre',
+    'Planète Jupiter',
+    'Planète Saturne',
+    'Planète Uranus',
+    'Planète Neptune'
+];
+
+function updateResults(query) {
+    searchResults.innerHTML = '';
+    if (query) {
+        const filteredData = data.filter(item =>
+            item.toLowerCase().includes(query.toLowerCase())
+        );
+
+        if (filteredData.length > 0) {
+            searchResults.style.display = 'block';
+            filteredData.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.addEventListener('click', function() {
+                    searchInput.value = item;
+                    searchResults.style.display = 'none';
+                });
+                searchResults.appendChild(li);
+            });
+        } else {
+            searchResults.style.display = 'none';
+        }
+    } else {
+        searchResults.style.display = 'none';
+    }
+}
+
+searchInput.addEventListener('input', function() {
+    updateResults(searchInput.value);
+});
+
+document.addEventListener('click', function(event) {
+    if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+        searchResults.style.display = 'none';
+    }
+});
+});</code></pre>
+    </div>
+</div>
+</section>
+
+        
+        <section class="example-section">
+            <h2>Barre de Recherche avec Ombre Intérieure</h2>
+        
+            <div class="example-preview">
+                <div class="container-shadow-search">
+                    <input type="search" placeholder="Rechercher...">
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-shadow-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-shadow-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+                font-size: 16px;
+        
+                &::placeholder {
+                    color: #999;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-shadow-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+                font-size: 16px;
+            }
+        
+            input[type="search"]::placeholder {
+                color: #999;
+            }
+        
+            @media (max-width: 600px) {
+                input[type="search"] {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Barre de Recherche avec Icône</h2>
+        
+            <div class="example-preview">
+                <div class="container-icon-search">
+                    <input type="search" placeholder="Rechercher...">
+                    <i class="icon-search"></i>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-icon-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+            &lt;i class="icon-search"&gt;&lt;/i&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-icon-search {
+            position: relative;
+        
+            input[type="search"] {
+                width: 100%;
+                padding: 10px 40px 10px 10px;
+                border: 2px solid #6c757d;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+        
+                &::placeholder {
+                    color: #888;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 8px 30px 8px 8px;
+                    font-size: 14px;
+                }
+            }
+        
+            .icon-search {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                color: #6c757d;
+                pointer-events: none;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-icon-search {
+            position: relative;
+        }
+        
+        .container-icon-search input[type="search"] {
+            width: 100%;
+            padding: 10px 40px 10px 10px;
+            border: 2px solid #6c757d;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        .container-icon-search input[type="search"]::placeholder {
+            color: #888;
+        }
+        
+        .container-icon-search .icon-search {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #6c757d;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 600px) {
+            .container-icon-search input[type="search"] {
+                padding: 8px 30px 8px 8px;
+                font-size: 14px;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Barre de Recherche avec Animation de Focus</h2>
+        
+            <div class="example-preview">
+                <div class="container-animated-search">
+                    <input type="search" placeholder="Rechercher...">
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-animated-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-animated-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #28a745;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        
+                &:focus {
+                    border-color: #218838;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                }
+        
+                &::placeholder {
+                    color: #888;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-animated-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #28a745;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+        
+            input[type="search"]:focus {
+                border-color: #218838;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+        
+            input[type="search"]::placeholder {
+                color: #888;
+            }
+        
+            @media (max-width: 600px) {
+                input[type="search"] {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Barre de Recherche Minimaliste</h2>
+        
+            <div class="example-preview">
+                <div class="container-minimal-search">
+                    <input type="search" placeholder="Rechercher...">
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-minimal-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-minimal-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                outline: none;
+                font-size: 16px;
+                background: #f9f9f9;
+        
+                &::placeholder {
+                    color: #bbb;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-minimal-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                outline: none;
+                font-size: 16px;
+                background: #f9f9f9;
+            }
+        
+            input[type="search"]::placeholder {
+                color: #bbb;
+            }
+        
+            @media (max-width: 600px) {
+                input[type="search"] {
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Barre de Recherche avec Bouton</h2>
+        
+            <div class="example-preview">
+                <div class="container-button-search">
+                    <input type="search" placeholder="Rechercher...">
+                    <button type="submit">Chercher</button>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-button-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+            &lt;button type="submit"&gt;Chercher&lt;/button&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-button-search {
+            display: flex;
+            width: 100%;
+        
+            input[type="search"] {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #007BFF;
+                border-radius: 5px 0 0 5px;
+                outline: none;
+                font-size: 16px;
+        
+                &::placeholder {
+                    color: #aaa;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        
+            button {
+                padding: 10px 15px;
+                border: 1px solid #007BFF;
+                border-radius: 0 5px 5px 0;
+                background: #007BFF;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none;
+                transition: background 0.3s;
+        
+                &:hover {
+                    background: #0056b3;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 8px 12px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-button-search {
+            display: flex;
+            width: 100%;
+        }
+        
+        .container-button-search input[type="search"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        .container-button-search input[type="search"]::placeholder {
+            color: #aaa;
+        }
+        
+        .container-button-search button {
+            padding: 10px 15px;
+            border: 1px solid #007BFF;
+            border-radius: 0 5px 5px 0;
+            background: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.3s;
+        }
+        
+        .container-button-search button:hover {
+            background: #0056b3;
+        }
+        
+        @media (max-width: 600px) {
+            .container-button-search input[type="search"] {
+                padding: 8px;
+                font-size: 14px;
+            }
+        
+            .container-button-search button {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Barre de Recherche avec Effet de Focus</h2>
+        
+            <div class="example-preview">
+                <div class="container-focus-search">
+                    <input type="search" placeholder="Rechercher...">
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-focus-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-focus-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #666;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                transition: border-color 0.3s, box-shadow 0.3s;
+        
+                &:focus {
+                    border-color: #333;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                }
+        
+                &::placeholder {
+                    color: #aaa;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-focus-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #666;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                transition: border-color 0.3s, box-shadow 0.3s;
+            }
+        
+            input[type="search"]:focus {
+                border-color: #333;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
+        
+            input[type="search"]::placeholder {
+                color: #aaa;
+            }
+        
+            @media (max-width: 600px) {
+                input[type="search"] {
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Barre de Recherche avec Bordure Doubles</h2>
+        
+            <div class="example-preview">
+                <div class="container-double-border-search">
+                    <input type="search" placeholder="Rechercher...">
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-double-border-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-double-border-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 12px;
+                border: 3px double #333;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                background: #f8f8f8;
+        
+                &::placeholder {
+                    color: #aaa;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-double-border-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 12px;
+                border: 3px double #333;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                background: #f8f8f8;
+            }
+        
+            input[type="search"]::placeholder {
+                color: #aaa;
+            }
+        
+            @media (max-width: 600px) {
+                input[type="search"] {
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Barre de Recherche avec Bordure Colorée</h2>
+        
+            <div class="example-preview">
+                <div class="container-colored-border-search">
+                    <input type="search" placeholder="Rechercher...">
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="container-colored-border-search"&gt;
+            &lt;input type="search" placeholder="Rechercher..."&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-colored-border-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #FF6347;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                background: #fff;
+        
+                &::placeholder {
+                    color: #666;
+                }
+        
+                @media (max-width: 600px) {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.container-colored-border-search {
+            input[type="search"] {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #FF6347;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                background: #fff;
+            }
+        
+            input[type="search"]::placeholder {
+                color: #666;
+            }
+        
+            @media (max-width: 600px) {
+                input[type="search"] {
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:contact@example.com">nicolas.webvision@gmail.fr</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Liens</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="#">Codages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <title>Site Exemple</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-image-container">
+            <img src="images/entete_1.jpg" alt="Image d'en-tête" class="header-image">
+            <div class="header-title">Codage Vision</div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Listes et tableaux</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="has-submenu">
+                <a href="#services">Codage</a>
+                <ul class="submenu">
+                    <li><a href="text-block.html">Bloc Texte</a></li>
+                    <li><a href="navigation-menu.html">Menu de navigation</a></li>
+                    <li><a href="footer.html">Pied de page</a></li>
+                    <li><a href="text-in-image.html">Texte dans l'image</a></li>
+                    <li><a href="contact-form.html">Formulaire de contact</a></li>
+                    <li><a href="list-and-table.html">Listes et Tableaux</a></li>
+                    <li><a href="search-bar.html">Barres de recherche</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <div class="example-preview">
+            <div class="container-bloc">
+                <h2>Le choix des listes et tableaux</h2>
+                <p>Les listes et les tableaux sont des outils essentiels dans la conception d'un site web, car ils permettent de structurer et de présenter des informations de manière claire et concise. Leur bonne utilisation peut améliorer la lisibilité du contenu, faciliter la compréhension des données complexes, et offrir une meilleure expérience utilisateur. En revanche, une mauvaise conception ou un usage inapproprié de ces éléments peut rendre le contenu confus et décourager les visiteurs.</p>
+                <p>Les listes, qu'elles soient ordonnées (numérotées) ou non ordonnées (à puces), sont parfaites pour organiser des informations en points distincts. Une liste bien conçue aide les utilisateurs à scanner rapidement le contenu et à repérer les informations importantes. Pour maximiser leur efficacité, il est crucial de maintenir la cohérence dans le style des listes tout au long du site. Par exemple, l'utilisation d'une même puce ou d'une numérotation uniforme contribue à une présentation visuelle harmonieuse.</p>
+                <p>Les tableaux sont essentiels pour présenter des données structurées et comparatives, comme des prix, des caractéristiques techniques, ou des horaires. Leur principal atout réside dans leur capacité à organiser des informations complexes de manière compréhensible et à permettre une comparaison directe entre différents éléments. Un tableau bien conçu doit être simple à lire et à interpréter. Cela implique de bien choisir la taille des cellules, les polices, et les couleurs pour assurer une lisibilité optimale. Il est également important de ne pas surcharger les tableaux avec trop de données. Lorsque les informations sont denses, il peut être utile de diviser les tableaux en sections ou d'utiliser des onglets pour permettre aux utilisateurs de naviguer facilement entre différentes catégories de données.</p>
+            </div>
+        </div>
+
+        <section class="example-section">
+            <h2>Liste Non Ordonnée avec des Puces</h2>
+        
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <ul class="unordered-list">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;ul class="unordered-list"&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;li&gt;Item 4&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.unordered-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        
+            li {
+                margin-bottom: 10px;
+                color: $text-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.unordered-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .unordered-list li {
+            margin-bottom: 10px;
+            color: #333;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="example-section">
+            <h2>Liste Ordonnée avec Numéros</h2>
+        
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <ol class="ordered-list">
+                        <li>Premier élément</li>
+                        <li>Deuxième élément</li>
+                        <li>Troisième élément</li>
+                        <li>Quatrième élément</li>
+                    </ol>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;ol class="ordered-list"&gt;
+            &lt;li&gt;Premier élément&lt;/li&gt;
+            &lt;li&gt;Deuxième élément&lt;/li&gt;
+            &lt;li&gt;Troisième élément&lt;/li&gt;
+            &lt;li&gt;Quatrième élément&lt;/li&gt;
+        &lt;/ol&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.ordered-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        
+            li {
+                margin-bottom: 10px;
+                color: $text-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.ordered-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        
+        .ordered-list li {
+            margin-bottom: 10px;
+            color: #333;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Liste avec Cases à Cocher</h2>
+        
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <ul class="checkbox-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="option1" value="1">
+                                Option 1
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="option2" value="2">
+                                Option 2
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="option3" value="3">
+                                Option 3
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="option4" value="4">
+                                Option 4
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;ul class="checkbox-list"&gt;
+            &lt;li&gt;
+                &lt;label&gt;
+                    &lt;input type="checkbox" name="option1" value="1"&gt;
+                    Option 1
+                &lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label&gt;
+                    &lt;input type="checkbox" name="option2" value="2"&gt;
+                    Option 2
+                &lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label&gt;
+                    &lt;input type="checkbox" name="option3" value="3"&gt;
+                    Option 3
+                &lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label&gt;
+                    &lt;input type="checkbox" name="option4" value="4"&gt;
+                    Option 4
+                &lt;/label&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.checkbox-list {
+            list-style-type: none;
+            padding-left: 0;
+        
+            li {
+                margin-bottom: 10px;
+        
+                label {
+                    cursor: pointer;
+        
+                    input[type="checkbox"] {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.checkbox-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .checkbox-list li {
+            margin-bottom: 10px;
+        }
+        
+        .checkbox-list label {
+            cursor: pointer;
+        }
+        
+        .checkbox-list input[type="checkbox"] {
+            margin-right: 10px;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Liste à Puces avec Icônes</h2>
+        
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <ul class="icon-list">
+                        <li><span class="icon">&#x2713;</span> Item 1</li>
+                        <li><span class="icon">&#x2713;</span> Item 2</li>
+                        <li><span class="icon">&#x2713;</span> Item 3</li>
+                        <li><span class="icon">&#x2713;</span> Item 4</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;ul class="icon-list"&gt;
+            &lt;li&gt;&lt;span class="icon"&gt;&#x2713;&lt;/span&gt; Item 1&lt;/li&gt;
+            &lt;li&gt;&lt;span class="icon"&gt;&#x2713;&lt;/span&gt; Item 2&lt;/li&gt;
+            &lt;li&gt;&lt;span class="icon"&gt;&#x2713;&lt;/span&gt; Item 3&lt;/li&gt;
+            &lt;li&gt;&lt;span class="icon"&gt;&#x2713;&lt;/span&gt; Item 4&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.icon-list {
+            list-style-type: none;
+            padding-left: 0;
+        
+            .icon {
+                color: $primary-color;
+                font-size: 1.2em;
+                margin-right: 10px;
+            }
+        
+            li {
+                margin-bottom: 10px;
+                font-size: 1.1em;
+                color: $text-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.icon-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .icon-list .icon {
+            color: #4CAF50;
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        
+        .icon-list li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #333;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Liste à Puces avec Animation au Survol</h2>
+        
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <ul class="animated-list">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;ul class="animated-list"&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;li&gt;Item 4&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.animated-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        
+            li {
+                margin-bottom: 10px;
+                font-size: 1em;
+                color: $text-color;
+                transition: transform 0.3s ease;
+                
+                &:hover {
+                    transform: translateX(10px);
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.animated-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .animated-list li {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #333;
+            transition: transform 0.3s ease;
+        }
+        
+        .animated-list li:hover {
+            transform: translateX(10px);
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Liste avec Style de Cartes</h2>
+        
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <ul class="card-list">
+                        <li class="card">
+                            <h3>Carte 1</h3>
+                            <p>Description pour la carte 1.</p>
+                        </li>
+                        <li class="card">
+                            <h3>Carte 2</h3>
+                            <p>Description pour la carte 2.</p>
+                        </li>
+                        <li class="card">
+                            <h3>Carte 3</h3>
+                            <p>Description pour la carte 3.</p>
+                        </li>
+                        <li class="card">
+                            <h3>Carte 4</h3>
+                            <p>Description pour la carte 4.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;ul class="card-list"&gt;
+            &lt;li class="card"&gt;
+                &lt;h3&gt;Carte 1&lt;/h3&gt;
+                &lt;p&gt;Description pour la carte 1.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li class="card"&gt;
+                &lt;h3&gt;Carte 2&lt;/h3&gt;
+                &lt;p&gt;Description pour la carte 2.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li class="card"&gt;
+                &lt;h3&gt;Carte 3&lt;/h3&gt;
+                &lt;p&gt;Description pour la carte 3.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li class="card"&gt;
+                &lt;h3&gt;Carte 4&lt;/h3&gt;
+                &lt;p&gt;Description pour la carte 4.&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.card-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        
+            .card {
+                background: $background-color;
+                border: 1px solid $border-color;
+                border-radius: 5px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 250px;
+                
+                h3 {
+                    margin-top: 0;
+                    color: $text-color;
+                }
+        
+                p {
+                    color: $secondary-color;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.card-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .card-list .card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 250px;
+        }
+        
+        .card-list .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .card-list .card p {
+            color: #666;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau avec En-têtes Colorés</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <table class="colored-headers">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Âge</th>
+                                <th>Ville</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jean Dupont</td>
+                                <td>28</td>
+                                <td>Paris</td>
+                            </tr>
+                            <tr>
+                                <td>Marie Curie</td>
+                                <td>35</td>
+                                <td>Lille</td>
+                            </tr>
+                            <tr>
+                                <td>Paul Martin</td>
+                                <td>40</td>
+                                <td>Lyon</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;table class="colored-headers"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Nom&lt;/th&gt;
+                    &lt;th&gt;Âge&lt;/th&gt;
+                    &lt;th&gt;Ville&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Jean Dupont&lt;/td&gt;
+                    &lt;td&gt;28&lt;/td&gt;
+                    &lt;td&gt;Paris&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Marie Curie&lt;/td&gt;
+                    &lt;td&gt;35&lt;/td&gt;
+                    &lt;td&gt;Lille&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Paul Martin&lt;/td&gt;
+                    &lt;td&gt;40&lt;/td&gt;
+                    &lt;td&gt;Lyon&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.colored-headers {
+            width: 100%;
+            border-collapse: collapse;
+        
+            th {
+                background: $primary-color;
+                color: white;
+                padding: 10px;
+                text-align: left;
+            }
+        
+            td {
+                padding: 10px;
+                border-bottom: 1px solid $border-color;
+            }
+        
+            tbody tr:nth-child(even) {
+                background: $light-bg-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.colored-headers {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .colored-headers th {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .colored-headers td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .colored-headers tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau avec Bordures Arrondies</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <table class="rounded-borders">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Prix</th>
+                                <th>Quantité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chaise</td>
+                                <td>$50</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Table</td>
+                                <td>$150</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Lampe</td>
+                                <td>$30</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;table class="rounded-borders"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Produit&lt;/th&gt;
+                    &lt;th&gt;Prix&lt;/th&gt;
+                    &lt;th&gt;Quantité&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Chaise&lt;/td&gt;
+                    &lt;td&gt;$50&lt;/td&gt;
+                    &lt;td&gt;10&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Table&lt;/td&gt;
+                    &lt;td&gt;$150&lt;/td&gt;
+                    &lt;td&gt;5&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Lampe&lt;/td&gt;
+                    &lt;td&gt;$30&lt;/td&gt;
+                    &lt;td&gt;15&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.rounded-borders {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        
+            th, td {
+                padding: 10px;
+                border: 1px solid $border-color;
+            }
+        
+            thead {
+                background: $primary-color;
+                color: white;
+            }
+        
+            tbody tr:nth-child(even) {
+                background: $light-bg-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.rounded-borders {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .rounded-borders th, .rounded-borders td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .rounded-borders thead {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .rounded-borders tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau avec Lignes Alternées</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <table class="striped-rows">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Position</th>
+                                <th>Salaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alex Johnson</td>
+                                <td>Développeur</td>
+                                <td>$80,000</td>
+                            </tr>
+                            <tr>
+                                <td>Emma Watson</td>
+                                <td>Designer</td>
+                                <td>$70,000</td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>Chef de Projet</td>
+                                <td>$90,000</td>
+                            </tr>
+                            <tr>
+                                <td>Olivia Brown</td>
+                                <td>Analyste</td>
+                                <td>$75,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;table class="striped-rows"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Nom&lt;/th&gt;
+                    &lt;th&gt;Position&lt;/th&gt;
+                    &lt;th&gt;Salaire&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Alex Johnson&lt;/td&gt;
+                    &lt;td&gt;Développeur&lt;/td&gt;
+                    &lt;td&gt;$80,000&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Emma Watson&lt;/td&gt;
+                    &lt;td&gt;Designer&lt;/td&gt;
+                    &lt;td&gt;$70,000&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;John Doe&lt;/td&gt;
+                    &lt;td&gt;Chef de Projet&lt;/td&gt;
+                    &lt;td&gt;$90,000&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Olivia Brown&lt;/td&gt;
+                    &lt;td&gt;Analyste&lt;/td&gt;
+                    &lt;td&gt;$75,000&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.striped-rows {
+            width: 100%;
+            border-collapse: collapse;
+        
+            thead {
+                background: $primary-color;
+                color: white;
+            }
+        
+            tbody tr {
+                &:nth-child(even) {
+                    background: $light-bg-color;
+                }
+            }
+        
+            th, td {
+                padding: 10px;
+                border: 1px solid $border-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.striped-rows {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .striped-rows thead {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .striped-rows tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .striped-rows th, .striped-rows td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau avec Effet Hover</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <table class="hover-effect">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Age</th>
+                                <th>Ville</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anna Smith</td>
+                                <td>24</td>
+                                <td>New York</td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>30</td>
+                                <td>San Francisco</td>
+                            </tr>
+                            <tr>
+                                <td>Emily Johnson</td>
+                                <td>27</td>
+                                <td>Chicago</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Brown</td>
+                                <td>35</td>
+                                <td>Boston</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;table class="hover-effect"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Nom&lt;/th&gt;
+                    &lt;th&gt;Age&lt;/th&gt;
+                    &lt;th&gt;Ville&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Anna Smith&lt;/td&gt;
+                    &lt;td&gt;24&lt;/td&gt;
+                    &lt;td&gt;New York&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;John Doe&lt;/td&gt;
+                    &lt;td&gt;30&lt;/td&gt;
+                    &lt;td&gt;San Francisco&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Emily Johnson&lt;/td&gt;
+                    &lt;td&gt;27&lt;/td&gt;
+                    &lt;td&gt;Chicago&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Michael Brown&lt;/td&gt;
+                    &lt;td&gt;35&lt;/td&gt;
+                    &lt;td&gt;Boston&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.hover-effect {
+            width: 100%;
+            border-collapse: collapse;
+            transition: background-color 0.3s;
+        
+            tbody tr {
+                &:hover {
+                    background: $hover-bg-color;
+                }
+            }
+        
+            th, td {
+                padding: 10px;
+                border: 1px solid $border-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.hover-effect {
+            width: 100%;
+            border-collapse: collapse;
+            transition: background-color 0.3s;
+        }
+        
+        .hover-effect tbody tr:hover {
+            background: #f1f1f1;
+        }
+        
+        .hover-effect th, .hover-effect td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau avec Effet d'Ombre</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <table class="shadow-effect">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Âge</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Emma Smith</td>
+                                <td>29</td>
+                                <td>emma@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>James Brown</td>
+                                <td>34</td>
+                                <td>james@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Olivia Wilson</td>
+                                <td>27</td>
+                                <td>olivia@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;table class="shadow-effect"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Nom&lt;/th&gt;
+                    &lt;th&gt;Âge&lt;/th&gt;
+                    &lt;th&gt;Email&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Emma Smith&lt;/td&gt;
+                    &lt;td&gt;29&lt;/td&gt;
+                    &lt;td&gt;emma@example.com&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;James Brown&lt;/td&gt;
+                    &lt;td&gt;34&lt;/td&gt;
+                    &lt;td&gt;james@example.com&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Olivia Wilson&lt;/td&gt;
+                    &lt;td&gt;27&lt;/td&gt;
+                    &lt;td&gt;olivia@example.com&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.shadow-effect {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            thead {
+                background: $primary-color;
+                color: white;
+            }
+        
+            tbody tr:nth-child(even) {
+                background: $light-bg-color;
+            }
+        
+            th, td {
+                padding: 10px;
+                border: 1px solid $border-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.shadow-effect {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .shadow-effect thead {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .shadow-effect tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .shadow-effect th, .shadow-effect td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau avec Barre de Recherche</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Rechercher..." class="search-bar">
+                    </div>
+                    <table class="searchable-table">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Catégorie</th>
+                                <th>Prix</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td>Ordinateur</td>
+                                <td>Électronique</td>
+                                <td>$999</td>
+                            </tr>
+                            <tr>
+                                <td>Casque</td>
+                                <td>Accessoire</td>
+                                <td>$150</td>
+                            </tr>
+                            <tr>
+                                <td>Tablette</td>
+                                <td>Électronique</td>
+                                <td>$450</td>
+                            </tr>
+                            <tr>
+                                <td>Clavier</td>
+                                <td>Accessoire</td>
+                                <td>$80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="search-container"&gt;
+            &lt;input type="text" id="searchInput" placeholder="Rechercher..." class="search-bar"&gt;
+        &lt;/div&gt;
+        &lt;table class="searchable-table"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Produit&lt;/th&gt;
+                    &lt;th&gt;Catégorie&lt;/th&gt;
+                    &lt;th&gt;Prix&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody id="tableBody"&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Ordinateur&lt;/td&gt;
+                    &lt;td&gt;Électronique&lt;/td&gt;
+                    &lt;td&gt;$999&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Casque&lt;/td&gt;
+                    &lt;td&gt;Accessoire&lt;/td&gt;
+                    &lt;td&gt;$150&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Tablette&lt;/td&gt;
+                    &lt;td&gt;Électronique&lt;/td&gt;
+                    &lt;td&gt;$450&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Clavier&lt;/td&gt;
+                    &lt;td&gt;Accessoire&lt;/td&gt;
+                    &lt;td&gt;$80&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.search-container {
+            margin-bottom: 20px;
+        
+            .search-bar {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $border-color;
+                border-radius: 3px;
+                font-size: 16px;
+            }
+        }
+        
+        .searchable-table {
+            width: 100%;
+            border-collapse: collapse;
+        
+            thead {
+                background: $primary-color;
+                color: white;
+            }
+        
+            tbody tr:nth-child(even) {
+                background: $light-bg-color;
+            }
+        
+            th, td {
+                padding: 10px;
+                border: 1px solid $border-color;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.search-container {
+            margin-bottom: 20px;
+        }
+        
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        
+        .searchable-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .searchable-table thead {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .searchable-table tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .searchable-table th, .searchable-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau avec Colonnes Réductibles</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <table class="collapsible-columns">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Adresse</th>
+                                <th>Téléphone</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lisa Miller</td>
+                                <td>123 Main St</td>
+                                <td>(555) 123-4567</td>
+                                <td>lisa@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Kevin Anderson</td>
+                                <td>456 Elm St</td>
+                                <td>(555) 987-6543</td>
+                                <td>kevin@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Rachel Adams</td>
+                                <td>789 Oak St</td>
+                                <td>(555) 654-3210</td>
+                                <td>rachel@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;table class="collapsible-columns"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Nom&lt;/th&gt;
+                    &lt;th&gt;Adresse&lt;/th&gt;
+                    &lt;th&gt;Téléphone&lt;/th&gt;
+                    &lt;th&gt;Email&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Lisa Miller&lt;/td&gt;
+                    &lt;td&gt;123 Main St&lt;/td&gt;
+                    &lt;td&gt;(555) 123-4567&lt;/td&gt;
+                    &lt;td&gt;lisa@example.com&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Kevin Anderson&lt;/td&gt;
+                    &lt;td&gt;456 Elm St&lt;/td&gt;
+                    &lt;td&gt;(555) 987-6543&lt;/td&gt;
+                    &lt;td&gt;kevin@example.com&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Rachel Adams&lt;/td&gt;
+                    &lt;td&gt;789 Oak St&lt;/td&gt;
+                    &lt;td&gt;(555) 654-3210&lt;/td&gt;
+                    &lt;td&gt;rachel@example.com&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.collapsible-columns {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+        
+            thead {
+                background: $primary-color;
+                color: white;
+            }
+        
+            tbody tr {
+                &:nth-child(even) {
+                    background: $light-bg-color;
+                }
+            }
+        
+            th, td {
+                padding: 10px;
+                border: 1px solid $border-color;
+                position: relative;
+                overflow: hidden;
+            }
+        
+            td {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 10px;
+                    background: #f9f9f9;
+                    transform: translateX(100%);
+                    transition: transform 0.3s;
+                }
+        
+                &.collapsed:after {
+                    transform: translateX(0);
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.collapsible-columns {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+        
+        .collapsible-columns thead {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .collapsible-columns tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .collapsible-columns th, .collapsible-columns td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .collapsible-columns td:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 10px;
+            background: #f9f9f9;
+            transform: translateX(100%);
+            transition: transform 0.3s;
+        }
+        
+        .collapsible-columns td.collapsed:after {
+            transform: translateX(0);
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>Tableau à Colonnes Alternées</h2>
+        
+            <div class="example-preview">
+                <div class="container-table">
+                    <table class="striped-columns">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Description</th>
+                                <th>Quantité</th>
+                                <th>Prix</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Produit">Article 1</td>
+                                <td data-label="Description">Ce produit est génial.</td>
+                                <td data-label="Quantité">12</td>
+                                <td data-label="Prix">$20.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Produit">Article 2</td>
+                                <td data-label="Description">Un autre produit superbe.</td>
+                                <td data-label="Quantité">8</td>
+                                <td data-label="Prix">$35.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Produit">Article 3</td>
+                                <td data-label="Description">Le meilleur produit de tous.</td>
+                                <td data-label="Quantité">5</td>
+                                <td data-label="Prix">$50.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;table class="striped-columns"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Produit&lt;/th&gt;
+                    &lt;th&gt;Description&lt;/th&gt;
+                    &lt;th&gt;Quantité&lt;/th&gt;
+                    &lt;th&gt;Prix&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Produit"&gt;Article 1&lt;/td&gt;
+                    &lt;td data-label="Description"&gt;Ce produit est génial.&lt;/td&gt;
+                    &lt;td data-label="Quantité"&gt;12&lt;/td&gt;
+                    &lt;td data-label="Prix"&gt;$20.00&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Produit"&gt;Article 2&lt;/td&gt;
+                    &lt;td data-label="Description"&gt;Un autre produit superbe.&lt;/td&gt;
+                    &lt;td data-label="Quantité"&gt;8&lt;/td&gt;
+                    &lt;td data-label="Prix"&gt;$35.00&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Produit"&gt;Article 3&lt;/td&gt;
+                    &lt;td data-label="Description"&gt;Le meilleur produit de tous.&lt;/td&gt;
+                    &lt;td data-label="Quantité"&gt;5&lt;/td&gt;
+                    &lt;td data-label="Prix"&gt;$50.00&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.striped-columns {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            
+            thead {
+                background: $primary-color;
+                color: white;
+            }
+        
+            tbody tr:nth-child(odd) {
+                background: $text-muted;
+            }
+        
+            th, td {
+                padding: 10px;
+                border: 1px solid $border-color;
+            }
+        
+            // Responsive Design
+            @media (max-width: 768px) {
+                thead {
+                    display: none; // Cache l'en-tête du tableau
+                }
+        
+                tbody, tr {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin-bottom: 10px; // Espace entre les lignes
+                }
+        
+                td {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: right;
+                    padding-left: 50%;
+                    position: relative;
+        
+                    &:before {
+                        content: attr(data-label);
+                        position: absolute;
+                        left: 0;
+                        width: 50%;
+                        padding-left: 10px;
+                        white-space: nowrap;
+                        font-weight: bold;
+                        background: #f4f4f4; // Arrière-plan léger pour les labels
+                    }
+                }
+        
+                tr {
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.striped-columns {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        
+        .striped-columns thead {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .striped-columns tbody tr:nth-child(odd) {
+            background: #f9f9f9;
+        }
+        
+        .striped-columns th, .striped-columns td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        // Responsive Design
+        @media (max-width: 768px) {
+            .striped-columns thead {
+                display: none; // Cache l'en-tête du tableau
+            }
+        
+            .striped-columns tbody, .striped-columns tr {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 10px; // Espace entre les lignes
+            }
+        
+            .striped-columns td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+        
+                &:before {
+                    content: attr(data-label);
+                    position: absolute;
+                    left: 0;
+                    width: 50%;
+                    padding-left: 10px;
+                    white-space: nowrap;
+                    font-weight: bold;
+                    background: #f4f4f4; // Arrière-plan léger pour les labels
+                }
+            }
+        
+            .striped-columns tr {
+                border-bottom: 1px solid #ddd;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+                <p>Téléphone: +123 456 789</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Liens</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="#">Codages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

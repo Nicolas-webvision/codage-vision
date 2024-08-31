@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <title>Site Exemple</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-image-container">
+            <img src="images/entete_1.jpg" alt="Image d'en-tête" class="header-image">
+            <div class="header-title">Codage Vision</div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Blocs de texte</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="has-submenu">
+                <a href="#services">Codage</a>
+                <ul class="submenu">
+                    <li><a href="text-block.html">Bloc Texte</a></li>
+                    <li><a href="navigation-menu.html">Menu de navigation</a></li>
+                    <li><a href="footer.html">Pied de page</a></li>
+                    <li><a href="contact-form.html">Formulaire de contact</a></li>
+                    <li><a href="list-and-table.html">Listes et Tableaux</a></li>
+                    <li><a href="search-bar.html">Barres de recherche</a></li>
+                    <li><a href="button.html">Styles de bouton</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+    
+        <div class="example-preview">
+            <div class="container-bloc">
+                <h2>Le choix des blocs de texte</h2>
+                <p>Le choix des blocs de texte et des titres est fondamental lors de la création d’un site web, car il influence directement la lisibilité, la hiérarchisation de l'information, et l'impact visuel. Un bon choix de mise en page peut transformer un site ordinaire en une plateforme engageante et facile à parcourir, tandis qu'une mauvaise sélection peut rendre le contenu difficile à suivre, voire décourager les visiteurs.</p>
+                <p>Les blocs de texte doivent être conçus pour favoriser une lecture fluide. Cela implique de choisir une police de caractère lisible, une taille de texte appropriée, et d'éviter les pavés de texte trop denses. La structure des paragraphes doit être aérée, avec des espaces blancs stratégiquement placés pour reposer les yeux du lecteur. Un texte bien structuré, divisé en sections claires et concises, aide les utilisateurs à scanner rapidement le contenu et à repérer les informations pertinentes.</p>
+                <p>De plus, un bon choix de blocs de texte et de titres permet de refléter l'identité de la marque. Le ton du texte, la palette de couleurs et la typographie doivent être cohérents avec l'image que l'on souhaite projeter, qu'elle soit professionnelle, décontractée, ou innovante. Chaque choix doit renforcer l'expérience utilisateur tout en rendant le site agréable et facile à utiliser.</p>
+            </div>
+        </div>
+
+        <section class="example-section">
+            <h2>Bloc avec une bordure colorée et une ombre</h2>
+    
+            <div class="example-preview">
+                <div class="container-bloc">
+                    <h2>Les planètes</h2>
+                    <p>Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.</p>
+                </div>
+            </div>
+    
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>&lt;div class="container-bloc"&gt;
+        &lt;h2&gt;Les planètes&lt;/h2&gt;
+        &lt;p&gt;Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+            </div>
+        </div>    
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-bloc {
+        border-left: 5px solid $primary-color;
+        background: $background-color;
+        padding: $padding;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+        h2 {
+            margin-top: 0;
+            color: $text-color;
+        }
+    
+        p {
+            color: $secondary-color;
+        }
+    
+        @media (max-width: 600px) {
+            padding: 15px;
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-bloc {
+        border-left: 5px solid #4CAF50;
+        background: #e0f7fa;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container-bloc h2 {
+        margin-top: 0;
+        color: #00796b;
+    }
+    
+    .container-bloc p {
+        color: #004d40;
+    }
+    
+    @media (max-width: 600px) {
+        .container-bloc {
+            padding: 15px;
+        }
+        .container-bloc h2 {
+            font-size: 1.5em;
+        }
+        .container-bloc p {
+            font-size: 1em;
+        }
+    }</code></pre>
+            </div>
+            </div>
+        </section>
+    
+
+        <section class="example-section">
+            <h2>Bloc avec un fond dégradé</h2>
+    
+            <!-- Aperçu du bloc de texte -->
+            <div class="example-preview">
+                <div class="container-degrade">
+                    <h2>Les planètes</h2>
+                    <p>Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.</p>
+                </div>
+            </div>
+    
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>&lt;div class="container-degrade"&gt;
+        &lt;h2&gt;Les planètes&lt;/h2&gt;
+        &lt;p&gt;Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-degrade {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+        h2 {
+            margin-top: 0;
+            color: #fff;
+        }
+    
+        p {
+            color: #fff;
+        }
+    
+        @media (max-width: 600px) {
+            padding: 15px;
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-degrade {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container-degrade h2 {
+        margin-top: 0;
+        color: #fff;
+    }
+    
+    .container-degrade p {
+        color: #fff;
+    }
+    
+    @media (max-width: 600px) {
+        .container-degrade {
+            padding: 15px;
+        }
+        .container-degrade h2 {
+            font-size: 1.5em;
+        }
+        .container-degrade p {
+            font-size: 1em;
+        }
+    }</code></pre>
+            </div>
+            </div>
+        </section>
+
+        <section class="example-section">
+            <h2>Bloc avec une image de fond semi-transparente</h2>
+    
+            <!-- Aperçu du bloc de texte -->
+            <div class="example-preview">
+                <div class="container-image">
+                    <h2>Les planètes</h2>
+                    <p>Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.</p>
+                </div>
+            </div>
+    
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>&lt;div class="container-image"&gt;
+        &lt;h2&gt;Les planètes&lt;/h2&gt;
+        &lt;p&gt;Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-image {
+        background: rgba(0, 0, 0, 0.5) url('background-image.jpg') no-repeat center center;
+        background-size: cover;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+        h2 {
+            margin-top: 0;
+            color: #fff;
+        }
+    
+        p {
+            color: #fff;
+        }
+    
+        @media (max-width: 600px) {
+            padding: 15px;
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-image {
+        background: rgba(0, 0, 0, 0.5) url('background-image.jpg') no-repeat center center;
+        background-size: cover;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container-image h2 {
+        margin-top: 0;
+        color: #fff;
+    }
+    
+    .container-image p {
+        color: #fff;
+    }
+    
+    @media (max-width: 600px) {
+        .container-image {
+            padding: 15px;
+        }
+        .container-image h2 {
+            font-size: 1.5em;
+        }
+        .container-image p {
+            font-size: 1em;
+        }
+    }</code></pre>
+            </div>
+            </div>
+        </section>
+
+        <section class="example-section">
+            <h2>Bloc minimaliste avec une barre latérale colorée</h2>
+    
+            <!-- Aperçu du bloc de texte -->
+            <div class="example-preview">
+                <div class="container-minimal">
+                    <h2>Les planètes</h2>
+                    <p>Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.</p>
+                </div>
+            </div>
+    
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>&lt;div class="container-minimal"&gt;
+        &lt;h2&gt;Les planètes&lt;/h2&gt;
+        &lt;p&gt;Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-minimal {
+        border-left: 10px solid #3498db; /* Couleur de la barre latérale */
+        padding: 20px;
+        margin: 20px 0;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+    
+        p {
+            color: #666;
+        }
+    
+        @media (max-width: 600px) {
+            padding: 15px;
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-minimal {
+        border-left: 10px solid #3498db; /* Couleur de la barre latérale */
+        padding: 20px;
+        margin: 20px 0;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container-minimal h2 {
+        margin-top: 0;
+        color: #333;
+    }
+    
+    .container-minimal p {
+        color: #666;
+    }
+    
+    @media (max-width: 600px) {
+        .container-minimal {
+            padding: 15px;
+        }
+        .container-minimal h2 {
+            font-size: 1.5em;
+        }
+        .container-minimal p {
+            font-size: 1em;
+        }
+    }</code></pre>
+            </div>
+            </div>
+        </section>
+
+        <section class="example-section">
+            <h2>Bloc avec encadré et icône</h2>
+    
+            <!-- Aperçu du bloc de texte -->
+            <div class="example-preview">
+                <div class="container-icon">
+                    <div class="icon">&#9733;</div>
+                    <h2>Les planètes</h2>
+                    <p>Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.</p>
+                </div>
+            </div>
+    
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>&lt;div class="container-icon"&gt;
+        &lt;div class="icon"&gt;&amp;#9733;&lt;/div&gt;
+        &lt;h2&gt;Les planètes&lt;/h2&gt;
+        &lt;p&gt;Découvrez les planètes du système solaire, laissez la passion dépasser votre imagination, et préparez-vous à un voyage incroyable.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-icon {
+        display: flex;
+        align-items: center;
+        border: 2px solid #3498db; /* Couleur de l'encadré */
+        padding: 20px;
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+        .icon {
+            font-size: 2em;
+            color: #3498db; /* Couleur de l'icône */
+            margin-right: 15px;
+        }
+    
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+    
+        p {
+            color: #666;
+        }
+    
+        @media (max-width: 600px) {
+            padding: 15px;
+            .icon {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }</code></pre>
+            </div>
+            </div>
+    
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                <pre><code>.container-icon {
+        display: flex;
+        align-items: center;
+        border: 2px solid #3498db; /* Couleur de l'encadré */
+        padding: 20px;
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container-icon .icon {
+        font-size: 2em;
+        color: #3498db; /* Couleur de l'icône */
+        margin-right: 15px;
+    }
+    
+    .container-icon h2 {
+        margin-top: 0;
+        color: #333;
+    }
+    
+    .container-icon p {
+        color: #666;
+    }
+    
+    @media (max-width: 600px) {
+        .container-icon {
+            padding: 15px;
+        }
+        .container-icon .icon {
+            font-size: 1.5em;
+        }
+        .container-icon h2 {
+            font-size: 1.5em;
+        }
+        .container-icon p {
+            font-size: 1em;
+        }
+    }</code></pre>
+            </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:contact@example.com">nicolas.webvision@gmail.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Liens</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+    
+     

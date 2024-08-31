@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <title>Site Exemple</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-image-container">
+            <img src="images/entete_1.jpg" alt="Image d'en-tête" class="header-image">
+            <div class="header-title">Codage Vision</div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Blocs de texte</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="has-submenu">
+                <a href="#services">Codage</a>
+                <ul class="submenu">
+                    <li><a href="text-block.html">Bloc Texte</a></li>
+                    <li><a href="navigation-menu.html">Menu de navigation</a></li>
+                    <li><a href="footer.html">Pied de page</a></li>
+                    <li><a href="contact-form.html">Formulaire de contact</a></li>
+                    <li><a href="list-and-table.html">Listes et Tableaux</a></li>
+                    <li><a href="search-bar.html">Barres de recherche</a></li>
+                    <li><a href="button.html">Styles de bouton</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+    
+        <div class="example-preview">
+            <div class="container-bloc">
+                <h2>Le choix des blocs de texte</h2>
+                <p>Le choix des blocs de texte et des titres est fondamental lors de la création d’un site web, car il influence directement la lisibilité, la hiérarchisation de l'information, et l'impact visuel. Un bon choix de mise en page peut transformer un site ordinaire en une plateforme engageante et facile à parcourir, tandis qu'une mauvaise sélection peut rendre le contenu difficile à suivre, voire décourager les visiteurs.</p>
+                <p>Les blocs de texte doivent être conçus pour favoriser une lecture fluide. Cela implique de choisir une police de caractère lisible, une taille de texte appropriée, et d'éviter les pavés de texte trop denses. La structure des paragraphes doit être aérée, avec des espaces blancs stratégiquement placés pour reposer les yeux du lecteur. Un texte bien structuré, divisé en sections claires et concises, aide les utilisateurs à scanner rapidement le contenu et à repérer les informations pertinentes.</p>
+                <p>De plus, un bon choix de blocs de texte et de titres permet de refléter l'identité de la marque. Le ton du texte, la palette de couleurs et la typographie doivent être cohérents avec l'image que l'on souhaite projeter, qu'elle soit professionnelle, décontractée, ou innovante. Chaque choix doit renforcer l'expérience utilisateur tout en rendant le site agréable et facile à utiliser.</p>
+            </div>
+        </div>
+
+        <section class="example-section">
+            <h2>Différents Styles de Boutons</h2>
+        
+            <div class="example-preview">
+                <div class="button-container">
+                    <button class="btn-primary">Bouton Principal</button>
+                    <button class="btn-outline">Bouton Outline</button>
+                    <button class="btn-rounded">Bouton Arrondi</button>
+                    <button class="btn-shadow">Bouton avec Ombre</button>
+                    <button class="btn-gradient">Bouton Dégradé</button>
+                    <button class="btn-glow">Bouton Lumineux</button>
+                    <button class="btn-icon">Bouton avec Icône</button>
+                    <button class="btn-pulse">Bouton Pulse</button>
+                    <button class="btn-borderless">Bouton Sans Bordure</button>
+                    <button class="btn-text-only">Texte Seulement</button>
+                </div>
+            </div>
+        
+            <!-- Code HTML -->
+            <button class="collapsible">Afficher le code HTML</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>&lt;div class="button-container"&gt;
+            &lt;button class="btn-primary"&gt;Bouton Principal&lt;/button&gt;
+            &lt;button class="btn-outline"&gt;Bouton Outline&lt;/button&gt;
+            &lt;button class="btn-rounded"&gt;Bouton Arrondi&lt;/button&gt;
+            &lt;button class="btn-shadow"&gt;Bouton avec Ombre&lt;/button&gt;
+            &lt;button class="btn-gradient"&gt;Bouton Dégradé&lt;/button&gt;
+            &lt;button class="btn-glow"&gt;Bouton Lumineux&lt;/button&gt;
+            &lt;button class="btn-icon"&gt;Bouton avec Icône&lt;/button&gt;
+            &lt;button class="btn-pulse"&gt;Bouton Pulse&lt;/button&gt;
+            &lt;button class="btn-borderless"&gt;Bouton Sans Bordure&lt;/button&gt;
+            &lt;button class="btn-text-only"&gt;Texte Seulement&lt;/button&gt;
+        &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code SCSS -->
+            <button class="collapsible">Afficher le code SCSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .btn-primary {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #007BFF;
+            border: 2px solid #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-rounded {
+            background-color: #28A745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        
+        .btn-shadow {
+            background-color: #FFC107;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(45deg, #FF416C, #FF4B2B);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-glow {
+            background-color: #6610F2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #6610F2;
+            cursor: pointer;
+        }
+        
+        .btn-icon {
+            background-color: #17A2B8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .btn-icon::before {
+            content: '🔍';
+            position: absolute;
+            left: -25px;
+            font-size: 20px;
+        }
+        
+        .btn-pulse {
+            background-color: #DC3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .btn-borderless {
+            background-color: transparent;
+            color: #343A40;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .btn-text-only {
+            background-color: transparent;
+            color: #6C757D;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .button-container button {
+                width: 100%;
+                padding: 15px 0;
+                margin: 5px 0;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        
+            <!-- Code CSS -->
+            <button class="collapsible">Afficher le code CSS</button>
+            <div class="collapsible-content">
+                <div class="code-block">
+                    <button class="copy-btn">Copier</button>
+                    <pre><code>.button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .btn-primary {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #007BFF;
+            border: 2px solid #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-rounded {
+            background-color: #28A745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        
+        .btn-shadow {
+            background-color: #FFC107;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(45deg, #FF416C, #FF4B2B);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-glow {
+            background-color: #6610F2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #6610F2;
+            cursor: pointer;
+        }
+        
+        .btn-icon {
+            background-color: #17A2B8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .btn-icon::before {
+            content: '🔍';
+            position: absolute;
+            left: -25px;
+            font-size: 20px;
+        }
+        
+        .btn-pulse {
+            background-color: #DC3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .btn-borderless {
+            background-color: transparent;
+            color: #343A40;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .btn-text-only {
+            background-color: transparent;
+            color: #6C757D;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .button-container button {
+                width: 100%;
+                padding: 15px 0;
+                margin: 5px 0;
+            }
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <div class="container-minimal">
+            <h2>Explications des Styles de Boutons :</h2>
+            <p><strong>Bouton Principal :</strong> Un bouton standard avec un fond bleu et un texte blanc.</p>
+            <p><strong>Bouton Outline :</strong> Un bouton transparent avec une bordure et un texte bleus.</p>
+            <p><strong>Bouton Arrondi :</strong> Un bouton vert avec des bords arrondis.</p>
+            <p><strong>Bouton avec Ombre :</strong> Un bouton jaune avec une ombre pour un effet de profondeur.</p>
+            <p><strong>Bouton Dégradé :</strong> Un bouton avec un dégradé rouge-rose.</p>
+            <p><strong>Bouton Lumineux :</strong> Un bouton violet avec un effet de lueur.</p>
+            <p><strong>Bouton avec Icône :</strong> Un bouton bleu clair avec une icône d'une loupe à gauche du texte.</p>
+            <p><strong>Bouton Pulse :</strong> Un bouton rouge qui effectue une légère animation de pulsation.</p>
+            <p><strong>Bouton Sans Bordure :</strong> Un bouton sans bordure, avec juste du texte gris foncé.</p>
+            <p><strong>Texte Seulement :</strong> Un bouton transparent qui ressemble à un lien avec du texte souligné en gris.</p>
+
+            <p>Ces boutons sont conçus pour être responsives et s'adapter aux écrans de toutes tailles.</p>
+        </div>
+
+    </main>
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:contact@example.com">nicolas.webvision@gmail.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Liens</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
